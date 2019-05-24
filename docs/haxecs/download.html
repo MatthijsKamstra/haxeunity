@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>How to · GitBook</title>
+        <title>Download · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,7 +65,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../20build/about.md" />
+    <link rel="next" href="resource.html" />
     
     
     <link rel="prev" href="about.html" />
@@ -194,9 +194,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../haxecs/about.html">
+        <li class="chapter " data-level="1.3" data-path="about.html">
             
-                <a href="../haxecs/about.html">
+                <a href="about.html">
             
                     
                     Haxe and Unity/C#
@@ -208,9 +208,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../haxecs/download.html">
+        <li class="chapter active" data-level="1.3.1" data-path="download.html">
             
-                <a href="../haxecs/download.html">
+                <a href="download.html">
             
                     
                     Download
@@ -221,9 +221,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="../haxecs/resource.html">
+        <li class="chapter " data-level="1.3.2" data-path="resource.html">
             
-                <a href="../haxecs/resource.html">
+                <a href="resource.html">
             
                     
                     Resources
@@ -239,9 +239,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="about.html">
+        <li class="chapter " data-level="1.4" data-path="../00helloworld/about.html">
             
-                <a href="about.html">
+                <a href="../00helloworld/about.html">
             
                     
                     Example Hello World
@@ -253,9 +253,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1" data-path="example.html">
+        <li class="chapter " data-level="1.4.1" data-path="../00helloworld/example.html">
             
-                <a href="example.html">
+                <a href="../00helloworld/example.html">
             
                     
                     How to
@@ -443,7 +443,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >How to</a>
+        <a href=".." >Download</a>
     </h1>
 </div>
 
@@ -458,69 +458,49 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="hello-world-example"><a name="hello-world-example" class="plugin-anchor" href="#hello-world-example"><i class="fa fa-link" aria-hidden="true"></i></a>Hello World Example</h1>
-<p>Check the <a href="https://github.com/MatthijsKamstra/haxejs/tree/master/00helloworld/code" target="_blank">code folder</a> for more comments.</p>
-<p>Create a folder named <strong>foobar</strong> (please use a better name; any name will do) and create folders <strong>bin</strong> and <strong>src</strong>.
-See example below:</p>
-<pre><code>+ foobar
-    + bin
-    + src
-        - Main.hx
-    - build.hxml
-</code></pre><h2 id="the-mainhx"><a name="the-mainhx" class="plugin-anchor" href="#the-mainhx"><i class="fa fa-link" aria-hidden="true"></i></a>The Main.hx</h2>
-<p>Open your favorite editor, copy/paste the code and save it in the <code>src</code> folder.</p>
-<pre><code class="lang-haxe"><span class="hljs-keyword">package</span>;
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span>
-</span>{
-    <span class="hljs-comment">// constructor</span>
-    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">trace</span>(<span class="hljs-string">&quot;Hello world&quot;</span>);
-    }
-
-    <span class="hljs-comment">// run code automatically</span>
-    <span class="hljs-keyword">static</span> <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">var</span> main = <span class="hljs-keyword">new</span> Main();
-    }
-}
+                                <h1 id="install-haxe"><a name="install-haxe" class="plugin-anchor" href="#install-haxe"><i class="fa fa-link" aria-hidden="true"></i></a>Install Haxe</h1>
+<p>Before you can use there are a couple of thing you need to do.</p>
+<p>Obviously you need to install Haxe. There are a <a href="../haxe/installation.html">couple of ways to do it</a>, but in this document I will send you to the <a href="#haxe">official Haxe place</a>. After that you need to install <code>hxcs</code>-lib via <a href="#haxelib">haxelib</a> and last but not least <a href="#cs">.NET development framework (either Microsoft.NET or Mono)</a>.</p>
+<p>And a <a href="#ide">code editor</a> will be useful!</p>
+<hr>
+<p>Current Haxe version is (at the time of writing):</p>
+<ul>
+<li><strong>Haxe</strong> v3.4.7</li>
+</ul>
+<p>But if the version numbers changed, it means I haven&apos;t updated this part of the document in some time :D</p>
+<p><a name="haxe"></a></p>
+<h2 id="download-haxe"><a name="download-haxe" class="plugin-anchor" href="#download-haxe"><i class="fa fa-link" aria-hidden="true"></i></a>Download Haxe</h2>
+<p><img src="../img/haxe_logo.png" alt=""></p>
+<ul>
+<li>Get your version here: <a href="http://haxe.org/download/" target="_blank">http://haxe.org/download/</a></li>
+</ul>
+<p><a name="haxelib"></a></p>
+<p>After you have installed Haxe, you automatically have access to <code>haxelib</code>. Use that you install <code>hxcs</code>:</p>
+<pre><code class="lang-bash">haxelib install hxcs
 </code></pre>
-<p>Below you can see and try the same example code at <a href="https://try.haxe.org/" target="_blank">try.haxe.org</a> without installing Haxe.</p>
-<iframe src="https://try.haxe.org/embed/80cf4" width="100%" height="300" frameborder="no" allowfullscreen>
-    <a href="https://try.haxe.org/#80cf4" target="_blank">Try Haxe !</a>
-</iframe>
-
-<p>You could create an even shorter &quot;hello world&quot; example:</p>
-<iframe src="https://try.haxe.org/embed/197E1" width="100%" height="300" frameborder="no" allowfullscreen>
-    <a href="https://try.haxe.org/#197E1" target="_blank">Try Haxe !</a>
-</iframe>
-
-<p>But I think it&apos;s a good idea to use the static main function only to start the constructor</p>
-<pre><code class="lang-haxe"><span class="hljs-keyword">static</span> <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{<span class="hljs-keyword">var</span> main = <span class="hljs-keyword">new</span> Main(); }
-</code></pre>
-<blockquote>
-<p>If you want certain code to run automatically, you need to put it in a static main function, and specify the class in the compiler arguments.</p>
-</blockquote>
-<h2 id="the-haxe-build-file-buildhxml"><a name="the-haxe-build-file-buildhxml" class="plugin-anchor" href="#the-haxe-build-file-buildhxml"><i class="fa fa-link" aria-hidden="true"></i></a>The Haxe build file, build.hxml</h2>
-<p>There are a lot of different arguments that you are able to pass to the Haxe compiler.
-Place these arguments into a text file of one per line with the extension hxml. This file can then passed directly to the Haxe compiler as a build script.</p>
-<pre><code># // build.hxml
--cp src
--main Main
--js bin/example.js
--dce full
-</code></pre><h2 id="build-js-with-haxe"><a name="build-js-with-haxe" class="plugin-anchor" href="#build-js-with-haxe"><i class="fa fa-link" aria-hidden="true"></i></a>Build js with Haxe</h2>
-<p>To finish and see what we have, build the file and see the result</p>
-<ol>
-<li>Open your terminal</li>
-<li><code>cd</code> to the correct folder where you have saved the <code>build.hxml</code></li>
-<li>Type <code>haxe build.hxml</code></li>
-<li>Press enter</li>
-</ol>
-<p>It will output</p>
-<pre><code>Hello world
-</code></pre><p>You could build everything directly in the terminal.</p>
-<pre><code>haxe -cp src -main Main -js bin/example.js -dce full
-</code></pre><p>It will have the same result</p>
+<p>Source: <a href="https://haxe.org/manual/target-cs-getting-started.html" target="_blank">https://haxe.org/manual/target-cs-getting-started.html</a></p>
+<p><a name="cs"></a></p>
+<h2 id="download-net-development-framework-either-microsoftnet-or-mono"><a name="download-net-development-framework-either-microsoftnet-or-mono" class="plugin-anchor" href="#download-net-development-framework-either-microsoftnet-or-mono"><i class="fa fa-link" aria-hidden="true"></i></a>Download .NET development framework (either Microsoft.NET or Mono)</h2>
+<p>Haxe only works with Python 3, so you need to install python 3.</p>
+<ul>
+<li>Get your version here: <a href="https://dotnet.microsoft.com/" target="_blank">https://dotnet.microsoft.com/</a></li>
+</ul>
+<p>Press that big &quot;Get started&quot;-button and you will get instructions how to proceed on your platform.</p>
+<p><a name="ide"></a></p>
+<h2 id="code-editors"><a name="code-editors" class="plugin-anchor" href="#code-editors"><i class="fa fa-link" aria-hidden="true"></i></a>Code Editors</h2>
+<p>You can find a extensive list on <a href="http://haxe.org/documentation/introduction/editors-and-ides.html" target="_blank">http://haxe.org/</a>.
+And even a bigger list on the <a href="http://old.haxe.org/com/ide" target="_blank">old website</a>...</p>
+<p>(And I see no mentioning of Atom and Brackets.... even more choices)</p>
+<p><strong>But to keep everything simple</strong></p>
+<h3 id="on-windows"><a name="on-windows" class="plugin-anchor" href="#on-windows"><i class="fa fa-link" aria-hidden="true"></i></a>On Windows</h3>
+<p>Install <a href="http://www.flashdevelop.org/" target="_blank">FlashDevelop</a></p>
+<h3 id="on-everything-else"><a name="on-everything-else" class="plugin-anchor" href="#on-everything-else"><i class="fa fa-link" aria-hidden="true"></i></a>On everything else</h3>
+<p>Install <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> with the <a href="https://marketplace.visualstudio.com/items?itemName=vshaxe.haxe-extension-pack" target="_blank">Haxe Extension Pack </a>.</p>
+<h3 id="okay-these-two-are-also-good-for-all-platforms"><a name="okay-these-two-are-also-good-for-all-platforms" class="plugin-anchor" href="#okay-these-two-are-also-good-for-all-platforms"><i class="fa fa-link" aria-hidden="true"></i></a>Okay these two are also good for all platforms</h3>
+<p>Install <a href="http://sublimetext.com/" target="_blank">Sublimetext 2</a> with the <a href="https://github.com/clemos/haxe-sublime2-bundle" target="_blank">haxe sublime2 bundle</a>.</p>
+<p>It&apos;s freakish difficult to setup a project, but after that AWESOME!
+<a href="http://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a> with <a href="https://plugins.jetbrains.com/plugin/6873" target="_blank">Haxe support plugin</a></p>
+<p><em>Read more about code editors <a href="../haxe/choosing-a-code-editor.html">here</a></em></p>
 
                                 
                                 </section>
@@ -548,12 +528,12 @@ Place these arguments into a text file of one per line with the extension hxml. 
 
             
                 
-                <a href="about.html" class="navigation navigation-prev " aria-label="Previous page: Example Hello World">
+                <a href="about.html" class="navigation navigation-prev " aria-label="Previous page: Haxe and Unity/C#">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../20build/about.md" class="navigation navigation-next " aria-label="Next page: Example hxml">
+                <a href="resource.html" class="navigation navigation-next " aria-label="Next page: Resources">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -564,7 +544,7 @@ Place these arguments into a text file of one per line with the extension hxml. 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"How to","level":"1.4.1","depth":2,"next":{"title":"Example hxml","level":"1.5","depth":1,"path":"20build/about.md","ref":"20build/about.md","articles":[{"title":"How to","level":"1.5.1","depth":2,"path":"20build/example.md","ref":"20build/example.md","articles":[]}]},"previous":{"title":"Example Hello World","level":"1.4","depth":1,"path":"00helloworld/about.md","ref":"00helloworld/about.md","articles":[{"title":"How to","level":"1.4.1","depth":2,"path":"00helloworld/example.md","ref":"00helloworld/example.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":">=2.0.0","theme":"default","variables":{},"plugins":["edit-link","disqus","ga","anchors"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"haxe-and-unity"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-67866831-6"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/MatthijsKamstra/haxeandunity/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"intro.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"00helloworld/example.md","mtime":"2017-12-08T09:51:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-24T17:01:14.226Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Download","level":"1.3.1","depth":2,"next":{"title":"Resources","level":"1.3.2","depth":2,"path":"haxecs/resource.md","ref":"haxecs/resource.md","articles":[]},"previous":{"title":"Haxe and Unity/C#","level":"1.3","depth":1,"path":"haxecs/about.md","ref":"haxecs/about.md","articles":[{"title":"Download","level":"1.3.1","depth":2,"path":"haxecs/download.md","ref":"haxecs/download.md","articles":[]},{"title":"Resources","level":"1.3.2","depth":2,"path":"haxecs/resource.md","ref":"haxecs/resource.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":">=2.0.0","theme":"default","variables":{},"plugins":["edit-link","disqus","ga","anchors"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"haxe-and-unity"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-67866831-6"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/MatthijsKamstra/haxeandunity/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"intro.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"haxecs/download.md","mtime":"2019-05-24T15:40:37.655Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-24T17:01:14.226Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
