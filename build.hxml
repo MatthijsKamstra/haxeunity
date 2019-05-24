@@ -1,0 +1,19 @@
+-cmd echo "├─┬ Start Haxe build"
+
+
+# extremly simple hello world
+-cmd cd haxe/code/
+--next
+build.hxml
+-cmd echo "│ ├── haxe/code"
+
+
+# hello world
+-cmd cd ../../
+-cmd cd 00helloworld/code/
+--next
+build.hxml
+-cmd echo "│ ├── 00helloworld/code"
+
+
+-cmd echo "└── Finished Haxe build"
