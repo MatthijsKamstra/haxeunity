@@ -1,6 +1,6 @@
 # About haxeunity (Haxe, Unity and C#)
 
-![Haxe logo](img/haxe_unity_logos.png)
+![Haxe logo](../img/haxe_unity_logos.png)
 
 I was working on a Unity 3D project, and I was curious if I could get it to work with Haxe-C# target.
 To be clear, I know this could be called C# documentation as well, but I needed more info about the combination Haxe/Unity/C#.
