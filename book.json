@@ -6,11 +6,11 @@
 	"plugins": ["edit-link","disqus","ga", "anchors"],
 	"pluginsConfig": {
 		"edit-link": {
-			"base": "https://github.com/MatthijsKamstra/haxejs/blob/master/",
+			"base": "https://github.com/MatthijsKamstra/haxeandunity/blob/master/",
 			"label": ""
 		},
 		"disqus": {
-			"shortName": "haxeandjavascript"
+			"shortName": "haxe-and-unity"
 		},
 		"ga": {
 			"token": "UA-67866831-1"
