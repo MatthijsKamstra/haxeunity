@@ -44,8 +44,11 @@ Haxe only works with Python 3, so you need to install python 3.
 
 Press that big "Get started"-button and you will get instructions how to proceed on your platform.
 
+<a name="mono">
 
+perhaps needs to be installed as well? Could be installed with Unity?
 
+Install the latest <a href="https://www.mono-project.com/download/stable/">Mono Compiler</a> <br/>
 
 
 <a name="ide"></a>
