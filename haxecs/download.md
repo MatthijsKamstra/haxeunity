@@ -24,7 +24,7 @@ But if the version numbers changed, it means I haven't updated this part of the 
 
 
 <a name="haxelib">
-
+### Haxelib
 
 After you have installed Haxe, you automatically have access to `haxelib`. Use that you install `hxcs`:
 
@@ -45,8 +45,9 @@ Haxe only works with Python 3, so you need to install python 3.
 Press that big "Get started"-button and you will get instructions how to proceed on your platform.
 
 <a name="mono">
+### Mono
 
-perhaps needs to be installed as well? Could be installed with Unity?
+Perhaps needs to be installed as well? Could be installed with Unity?
 
 Install the latest <a href="https://www.mono-project.com/download/stable/">Mono Compiler</a> <br/>
 
@@ -54,7 +55,7 @@ Install the latest <a href="https://www.mono-project.com/download/stable/">Mono 
 <a name="ide"></a>
 ## Code Editors
 
-You can find a extensive list on [http://haxe.org/](http://haxe.org/documentation/introduction/editors-and-ides.html).
+You can find an extensive list on [http://haxe.org/](http://haxe.org/documentation/introduction/editors-and-ides.html).
 And even a bigger list on the [old website](http://old.haxe.org/com/ide)...
 
 (And I see no mentioning of Atom and Brackets.... even more choices)
