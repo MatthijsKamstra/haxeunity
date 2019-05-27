@@ -1,6 +1,10 @@
--lib js-kit
--lib hxnodejs
+-lib haxelow
 -cp src
 -main Main
--js bin/example.js
+-cs out
 -dce full
+
+--next
+
+-cmd cd out/bin
+-cmd mono Main.exe

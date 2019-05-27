@@ -5,7 +5,7 @@ package ;
  */
 class Main {
 	function new(){
-		trace("C# reading and writing Example");
+		trace("C# reading and writing Example the Haxe way");
 
 		var str:String = 'Writing and reading a simple text file.!\nWritten on: ' + Date.now().toString();
 
