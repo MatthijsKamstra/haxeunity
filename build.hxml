@@ -24,6 +24,13 @@ build.hxml
 
 # write file
 -cmd cd ../../../../
+-cmd cd 01writing_cs/code/
+--next
+build.hxml
+-cmd echo "│ ├── 01writing_cs/code"
+
+# write file
+-cmd cd ../../../../
 -cmd cd 01writing_haxe/code/
 --next
 build.hxml

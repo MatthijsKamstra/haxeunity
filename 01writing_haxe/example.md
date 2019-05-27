@@ -11,7 +11,6 @@ See example below:
 
 ```
 + foobar
-	+ bin
 	+ src
 		- Main.hx
 	- build.hxml

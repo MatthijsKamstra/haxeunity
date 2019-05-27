@@ -18,6 +18,8 @@ This is the summary of my book.
    * [How to](01writing/example.md)
 * [Example Writing Haxe](01writing_haxe/about.md)
    * [How to](01writing_haxe/example.md)
+* [Example Reading C#](02reading_cs/about.md)
+   * [How to](02reading_cs/example.md)
 * [Example Reading Haxe](02reading_haxe/about.md)
    * [How to](02reading_haxe/example.md)
 * [Example Haxelow](04haxelow/about.md)

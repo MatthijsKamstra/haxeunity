@@ -52,8 +52,7 @@ class Main {
 		trace("open /out/bin/db.json");
 	}
 
-	static public function main()
-	{
+	static public function main() {
 		var main = new Main();
 	}
 }
