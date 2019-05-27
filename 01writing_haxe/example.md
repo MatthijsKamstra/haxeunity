@@ -1,7 +1,7 @@
 # Example
 
 Simply write content to a file.
-In this example we use Haxe code to generate C# code as "normal C# programmers" would do.
+In this example we use Haxe code to generate C# code as you would do when you target C# but also other `sys` targets (like: lua, python, neko, cpp, hl, php, java, cs).
 
 
 ## How to start
@@ -25,22 +25,20 @@ Open your favorite editor, copy/paste the code and save it in the `src` folder.
 ```
 package ;
 
-import cs.system.io.File;
+import sys.io.File;
 
 /**
  * @author Matthijs Kamstra aka [mck]
  */
 class Main
 {
-
 	function new()
 	{
-		trace("C# writing example, native");
-		// @source: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file
+		trace("C# writing example, Haxe");
+
 		var str : String = 'Hello World!\nWritten on: ' + Date.now().toString();
-		// WriteAllText creates a file, writes the specified string to the file,
-		// and then closes the file.    You do NOT need to call Flush() or Close().
-        File.WriteAllText("hello.txt", str);
+		// writing the Haxe way: will work on sys targets (lua, python, neko, cpp, hl, php, java, cs)
+		sys.io.File.saveContent('hello.txt',str);
 	}
 
 	static public function main()
