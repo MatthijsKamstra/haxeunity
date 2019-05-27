@@ -17,10 +17,10 @@ build.hxml
 
 # write file (native C#)
 -cmd cd ../../../../
--cmd cd 01writing/code/
+-cmd cd 01writing_cs/code/
 --next
 build.hxml
--cmd echo "│ ├── 01writing/code"
+-cmd echo "│ ├── 01writing_cs/code"
 
 # write file
 -cmd cd ../../../../
@@ -28,6 +28,20 @@ build.hxml
 --next
 build.hxml
 -cmd echo "│ ├── 01writing_haxe/code"
+
+# reading file
+-cmd cd ../../../../
+-cmd cd 02reading_haxe/code/
+--next
+build.hxml
+-cmd echo "│ ├── 02reading_haxe/code"
+
+# local json database
+-cmd cd ../../../../
+-cmd cd 04haxelow/code/
+--next
+build.hxml
+-cmd echo "│ ├── 04haxelow/code"
 
 
 -cmd echo "└── Finished Haxe build"

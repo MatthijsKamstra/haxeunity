@@ -11,10 +11,9 @@ See example below:
 
 ```
 + foobar
-	+ bin
 	+ src
 		- Main.hx
-	- javascript.hxml
+	- build.hxml
 ```
 
 
@@ -31,16 +30,9 @@ Open your favorite editor, copy/paste the code and save it in the `src` folder.
 ```
 package ;
 
-import js.Node;
-
-/**
- * @author Matthijs Kamstra aka [mck]
- */
-class Main
-{
-	function new()
-	{
-		trace("Node.js Haxelow Example");
+class Main {
+	function new() {
+		trace("C# Haxelow Example");
 
 		// Create the database
 		var db = new HaxeLow('db.json');
@@ -56,6 +48,8 @@ class Main
 		// This is the only way to save, no automatic saving
 		// takes place.
 		db.save();
+
+		trace("open /out/bin/db.json");
 	}
 
 	static public function main()
@@ -76,31 +70,30 @@ class Person {
 ```
 
 
-## The Haxe build file, javascript.hxml
+## The Haxe build file, build.hxml
 
-Copy and past the following lines in a document named `javascript.hxml`
-This is the short version, you want to chech out the full version open this [file](/code/javascript.hxml);
+Copy and past the following lines in a document named `build.hxml`
+This is the short version, you want to chech out the full version open this [file](/code/build.hxml);
 
 ```
-# // javascript.hxml
--lib js-kit
--lib hxnodejs
--lib haxelow
+# // build.hxml
 -cp src
 -main Main
--js bin/example.js
--cmd node bin/example.js
+-cs out
+-dce full
+--next
+-cmd cd out/bin
+-cmd mono Main.exe
 ```
 
 
-
-## Build js with Haxe and start Node
+## Build C# with Haxe and start export with mono
 
 To finish and see what we have, build the file and see the result
 
 1. Open your terminal
-2. `cd ` to the correct folder where you have saved the `javascript.hxml`
-3. type `haxe javascript.hxml`
+2. `cd ` to the correct folder where you have saved the `build.hxml`
+3. type `haxe build.hxml`
 4. press enter
 
 

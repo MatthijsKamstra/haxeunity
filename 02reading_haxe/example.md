@@ -23,47 +23,21 @@ See example below:
 check out [the installation](installation.md).
 
 
-## Node.js example
+## Pure node example
 
 ```
-var low = require('lowdb')
-var db = low('db.json')
-
-db('posts').push({ title: 'lowdb is awesome'})
+fs = require('fs')
+fs.readFile('/etc/hosts', 'utf8', function (err,data) {
+  	if (err) {
+		return console.log(err);
+	}
+	console.log(data);
+});
 ```
 
 
 ## The Main.hx
 
-
-
-It's not always possible to have the exact same calls in Haxe externs like you have in javascript/node.js.
-
-Lowdb is a good example:
-
-```
-var db = low('db.json')
-// translates in Haxe externs to
-var db = LowDb.construct('db.json');
-```
-
-and
-
-```
-db('posts').push({ title: 'lowdb is awesome'})
-// translates in Haxe externs to
-LowDb.query(_lowdb, 'posts').push({title:'lowdb is awesome'});
-```
-
-and
-
-```
-db('posts').find({ title: 'lowdb is awesome' })
-// translates in Haxe externs to
-trace (LowDb.query(_lowdb, 'posts').find({ title: 'lowdb is awesome' }));
-```
-
-Knowing that I hope the code below will make more sense.
 Open your favorite editor, copy/paste the code and save it in the `src` folder.
 
 
@@ -72,7 +46,7 @@ Open your favorite editor, copy/paste the code and save it in the `src` folder.
 package ;
 
 import js.Node;
-import js.npm.LowDb;
+import js.node.Fs;
 
 /**
  * @author Matthijs Kamstra aka [mck]
@@ -81,12 +55,12 @@ class Main
 {
 	function new()
 	{
-		trace("Node.js LowDB Example");
-
-		var _lowdb = LowDb.construct('db.json');
-		LowDb.query(_lowdb, 'posts').push({title:'lowdb is awesome'});
-
-		trace ("_lowdb.object: " + _lowdb.object);
+		Fs.readFile('/etc/hosts', {encoding:'utf8'}, function (err,data){
+			if(err != null)
+				trace( "err: " + err );
+			else
+				trace( "data: " + data );
+		});
 	}
 
 	static public function main()
@@ -94,7 +68,6 @@ class Main
 		var main = new Main();
 	}
 }
-
 ```
 
 
