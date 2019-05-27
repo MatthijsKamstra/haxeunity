@@ -15,5 +15,19 @@ build.hxml
 build.hxml
 -cmd echo "│ ├── 00helloworld/code"
 
+# write file (native C#)
+-cmd cd ../../../../
+-cmd cd 01writing/code/
+--next
+build.hxml
+-cmd echo "│ ├── 01writing/code"
+
+# write file
+-cmd cd ../../../../
+-cmd cd 01writing_haxe/code/
+--next
+build.hxml
+-cmd echo "│ ├── 01writing_haxe/code"
+
 
 -cmd echo "└── Finished Haxe build"

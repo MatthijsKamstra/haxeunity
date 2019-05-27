@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>More like this · GitBook</title>
+        <title>How to · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,8 +65,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="../20build/about.md" />
     
-    <link rel="prev" href="follow.html" />
+    
+    <link rel="prev" href="about.html" />
     
 
     </head>
@@ -301,9 +303,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="../01writing_haxe/about.html">
+        <li class="chapter " data-level="1.6" data-path="about.html">
             
-                <a href="../01writing_haxe/about.html">
+                <a href="about.html">
             
                     
                     Example writing Haxe
@@ -315,9 +317,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../01writing_haxe/example.html">
+        <li class="chapter active" data-level="1.6.1" data-path="example.html">
             
-                <a href="../01writing_haxe/example.html">
+                <a href="example.html">
             
                     
                     How to
@@ -379,9 +381,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.1" data-path="follow.html">
+        <li class="chapter " data-level="1.8.1" data-path="../resources/follow.html">
             
-                <a href="follow.html">
+                <a href="../resources/follow.html">
             
                     
                     Who to follow
@@ -392,9 +394,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8.2" data-path="more.html">
+        <li class="chapter " data-level="1.8.2" data-path="../resources/more.html">
             
-                <a href="more.html">
+                <a href="../resources/more.html">
             
                     
                     More like this
@@ -505,7 +507,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >More like this</a>
+        <a href=".." >How to</a>
     </h1>
 </div>
 
@@ -520,20 +522,61 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="more-more-more"><a name="more-more-more" class="plugin-anchor" href="#more-more-more"><i class="fa fa-link" aria-hidden="true"></i></a>More more more!!!!</h1>
-<p>So you want more...</p>
-<h2 id="haxe-and-nodejs"><a name="haxe-and-nodejs" class="plugin-anchor" href="#haxe-and-nodejs"><i class="fa fa-link" aria-hidden="true"></i></a>Haxe and Node.js</h2>
-<p><img src="../img/haxe_nodejs_logos.png" alt="Haxe logo"></p>
-<p><a href="http://matthijskamstra.github.io/haxenode/" target="_blank">haxenode</a></p>
-<h2 id="haxe-and-javascript"><a name="haxe-and-javascript" class="plugin-anchor" href="#haxe-and-javascript"><i class="fa fa-link" aria-hidden="true"></i></a>Haxe and JavaScript</h2>
-<p><img src="../img/haxe_javascript_logos.png" alt="Haxe logo"></p>
-<p><a href="http://matthijskamstra.github.io/haxejs/" target="_blank">haxejs</a></p>
-<h2 id="haxe-and-php"><a name="haxe-and-php" class="plugin-anchor" href="#haxe-and-php"><i class="fa fa-link" aria-hidden="true"></i></a>Haxe and PHP</h2>
-<p><img src="../img/haxe_php_logos.png" alt="Haxe logo"></p>
-<p><a href="http://matthijskamstra.github.io/haxephp/" target="_blank">haxephp</a></p>
-<h2 id="haxe-and-python"><a name="haxe-and-python" class="plugin-anchor" href="#haxe-and-python"><i class="fa fa-link" aria-hidden="true"></i></a>Haxe and Python</h2>
-<p><img src="../img/haxe_python_logos.png" alt="Haxe logo"></p>
-<p><a href="http://matthijskamstra.github.io/haxepython/" target="_blank">haxepython</a></p>
+                                <h1 id="example"><a name="example" class="plugin-anchor" href="#example"><i class="fa fa-link" aria-hidden="true"></i></a>Example</h1>
+<p>Simply write content to a file.
+In this example we use Haxe code to generate C# code as you would do when you target C# but also other <code>sys</code> targets (like: lua, python, neko, cpp, hl, php, java, cs).</p>
+<h2 id="how-to-start"><a name="how-to-start" class="plugin-anchor" href="#how-to-start"><i class="fa fa-link" aria-hidden="true"></i></a>How to start</h2>
+<p>Create a folder named <strong>foobar</strong> (please use a better name; any name will do) and create folders <strong>bin</strong> and <strong>src</strong>.
+See example below:</p>
+<pre><code>+ foobar
+    + bin
+    + src
+        - Main.hx
+    - build.hxml
+</code></pre><h2 id="the-mainhx"><a name="the-mainhx" class="plugin-anchor" href="#the-mainhx"><i class="fa fa-link" aria-hidden="true"></i></a>The Main.hx</h2>
+<p>Open your favorite editor, copy/paste the code and save it in the <code>src</code> folder.</p>
+<pre><code>package ;
+
+import sys.io.File;
+
+/**
+ * @author Matthijs Kamstra aka [mck]
+ */
+class Main
+{
+    function new()
+    {
+        trace(&quot;C# writing example, Haxe&quot;);
+
+        var str : String = &apos;Hello World!\nWritten on: &apos; + Date.now().toString();
+        // writing the Haxe way: will work on sys targets (lua, python, neko, cpp, hl, php, java, cs)
+        sys.io.File.saveContent(&apos;hello.txt&apos;,str);
+    }
+
+    static public function main()
+    {
+        var main = new Main();
+    }
+}
+</code></pre><h2 id="the-haxe-build-file-buildhxml"><a name="the-haxe-build-file-buildhxml" class="plugin-anchor" href="#the-haxe-build-file-buildhxml"><i class="fa fa-link" aria-hidden="true"></i></a>The Haxe build file, build.hxml</h2>
+<p>Copy and past the following lines in a document named <code>build.hxml</code>
+This is the short version, you want to chech out the full version open this <a href="../code/build.hxml">file</a>;</p>
+<pre><code># // build.hxml
+-cp src
+-main Main
+-cs out
+-dce full
+--next
+-cmd cd out/bin
+-cmd mono Main.exe
+</code></pre><h2 id="build-c-with-haxe-and-start-export-with-mono"><a name="build-c-with-haxe-and-start-export-with-mono" class="plugin-anchor" href="#build-c-with-haxe-and-start-export-with-mono"><i class="fa fa-link" aria-hidden="true"></i></a>Build C# with Haxe and start export with mono</h2>
+<p>To finish and see what we have, build the file and see the result</p>
+<ol>
+<li>Open your terminal</li>
+<li><code>cd</code> to the correct folder where you have saved the <code>build.hxml</code></li>
+<li>type <code>haxe build.hxml</code></li>
+<li>press enter</li>
+</ol>
 
                                 
                                 </section>
@@ -561,10 +604,14 @@
 
             
                 
-                <a href="follow.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Who to follow">
+                <a href="about.html" class="navigation navigation-prev " aria-label="Previous page: Example writing Haxe">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="../20build/about.md" class="navigation navigation-next " aria-label="Next page: Example hxml">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -573,7 +620,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"More like this","level":"1.8.2","depth":2,"next":{"title":"Try Haxe!","level":"1.8.3","depth":2,"url":"https://try.haxe.org/","ref":"https://try.haxe.org/","articles":[]},"previous":{"title":"Who to follow","level":"1.8.1","depth":2,"path":"resources/follow.md","ref":"resources/follow.md","articles":[]},"dir":"ltr"},"config":{"gitbook":">=2.0.0","theme":"default","variables":{},"plugins":["edit-link","disqus","ga","anchors"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"haxe-and-unity"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-67866831-6"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/MatthijsKamstra/haxeandunity/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"intro.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resources/more.md","mtime":"2018-01-08T23:37:51.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-27T14:07:13.329Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"How to","level":"1.6.1","depth":2,"next":{"title":"Example hxml","level":"1.7","depth":1,"path":"20build/about.md","ref":"20build/about.md","articles":[{"title":"How to","level":"1.7.1","depth":2,"path":"20build/example.md","ref":"20build/example.md","articles":[]}]},"previous":{"title":"Example writing Haxe","level":"1.6","depth":1,"path":"01writing_haxe/about.md","ref":"01writing_haxe/about.md","articles":[{"title":"How to","level":"1.6.1","depth":2,"path":"01writing_haxe/example.md","ref":"01writing_haxe/example.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":">=2.0.0","theme":"default","variables":{},"plugins":["edit-link","disqus","ga","anchors"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"haxe-and-unity"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-67866831-6"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/MatthijsKamstra/haxeandunity/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"intro.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"01writing_haxe/example.md","mtime":"2019-05-27T12:40:01.262Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-27T14:07:13.329Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
