@@ -1,6 +1,0 @@
--lib js-kit
--lib hxnodejs
--cp src
--main Main
--js bin/example.js
--dce full
