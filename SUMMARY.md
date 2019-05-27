@@ -15,7 +15,7 @@ This is the summary of my book.
 * [Example Hello World](00helloworld/about.md)
    * [How to](00helloworld/example.md)
 * [Example Writing C#](01writing_cs/about.md)
-   * [How to](01writing/example.md)
+   * [How to](01writing_cs/example.md)
 * [Example Writing Haxe](01writing_haxe/about.md)
    * [How to](01writing_haxe/example.md)
 * [Example Reading C#](02reading_cs/about.md)
