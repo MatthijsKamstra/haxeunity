@@ -20,6 +20,7 @@ This is the summary of my book.
 * [Example Reading Haxe](02reading_haxe/example.md)
 * [Example Haxelow](04haxelow/about.md)
    * [How to](04haxelow/example.md)
+* [Example api Haxe](06quote_haxe/example.md)
 * [Example Json](08json/about.md)
    * [How to](08json/example.md)
 * [Example hxml](20build/about.md)
