@@ -1,6 +1,6 @@
 # Example
 
-Simply write to a file.
+Simply write and read a file.
 
 
 ## How to start

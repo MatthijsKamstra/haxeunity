@@ -7,7 +7,6 @@ See example below:
 
 ```
 + foobar
-	+ bin
 	+ src
 		- Main.hx
 	- build.hxml
@@ -64,19 +63,25 @@ Place these arguments into a text file of one per line with the extension hxml. 
 # // build.hxml
 -cp src
 -main Main
--js bin/example.js
+-cs out
 -dce full
+--next
+-cmd cd out/bin
+-cmd mono Main.exe
 ```
 
 
-## Build js with Haxe
+
+## Build C# with Haxe and start export with mono
 
 To finish and see what we have, build the file and see the result
 
 1. Open your terminal
 2. `cd ` to the correct folder where you have saved the `build.hxml`
-3. Type `haxe build.hxml`
-4. Press enter
+3. type `haxe build.hxml`
+4. press enter
+
+
 
 
 It will output
@@ -89,7 +94,7 @@ It will output
 You could build everything directly in the terminal.
 
 ```
-haxe -cp src -main Main -js bin/example.js -dce full
+haxe -cp src -main Main -cs out -dce full
 ```
 
 It will have the same result

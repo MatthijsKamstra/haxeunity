@@ -1,6 +1,6 @@
 # Example
 
-Simply write to a file.
+Simply write and read a file.
 
 
 ## How to start
@@ -22,23 +22,25 @@ Open your favorite editor, copy/paste the code and save it in the `src` folder.
 
 
 ```
-package ;
+package;
+
+import cs.system.io.File;
+import cs.system.Console;
 
 /**
  * @author Matthijs Kamstra aka [mck]
  */
 class Main {
-	function new(){
-		trace("C# reading and writing Example");
+	function new() {
+		Console.WriteLine("C# writing example, native");
+		// @source: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file
+		var str:String = 'Hello World!\nWritten on: ' + Date.now().toString();
+		// WriteAllText creates a file, writes the specified string to the file,
+		// and then closes the file.    You do NOT need to call Flush() or Close().
+		File.WriteAllText("hello.txt", str);
 
-		var str:String = 'Writing and reading a simple text file.!\nWritten on: ' + Date.now().toString();
-
-		// write the file the Haxe way: will work on sys targets (lua, python, neko, cpp, hl, php, java, cs)
-		sys.io.File.saveContent('hello.txt', str);
-
-		// read the file
-		var content = sys.io.File.getContent('hello.txt');
-		trace (content);
+		var content = File.ReadAllText("hello.txt");
+		Console.WriteLine(content);
 	}
 
 	static public function main() {
