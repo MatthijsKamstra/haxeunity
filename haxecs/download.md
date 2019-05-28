@@ -36,16 +36,14 @@ haxelib install hxcs
 Source: <https://haxe.org/manual/target-cs-getting-started.html>
 
 <a name="cs">
-## Download .NET development framework (either Microsoft.NET or Mono)
-
-Haxe only works with Python 3, so you need to install python 3.
+## Download .NET development framework
 
 * Get your version here: <https://dotnet.microsoft.com/>
 
 Press that big "Get started"-button and you will get instructions how to proceed on your platform.
 
 <a name="mono">
-### Mono
+## Mono
 
 Perhaps needs to be installed as well? Could be installed with Unity?
 
