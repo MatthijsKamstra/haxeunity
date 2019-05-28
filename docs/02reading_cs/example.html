@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>How to · GitBook</title>
+        <title>Example Reading C# · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../02reading_haxe/about.html" />
+    <link rel="next" href="../02reading_haxe/example.html" />
     
     
-    <link rel="prev" href="about.html" />
+    <link rel="prev" href="../01writing_haxe/example.html" />
     
 
     </head>
@@ -271,9 +271,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../01writing_cs/about.html">
+        <li class="chapter " data-level="1.5" data-path="../01writing_cs/example.html">
             
-                <a href="../01writing_cs/about.html">
+                <a href="../01writing_cs/example.html">
             
                     
                     Example Writing C#
@@ -282,30 +282,11 @@
             
 
             
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.5.1" data-path="../01writing_cs/example.html">
-            
-                <a href="../01writing_cs/example.html">
-            
-                    
-                    How to
-            
-                </a>
-            
-
-            
         </li>
     
-
-            </ul>
+        <li class="chapter " data-level="1.6" data-path="../01writing_haxe/example.html">
             
-        </li>
-    
-        <li class="chapter " data-level="1.6" data-path="../01writing_haxe/about.html">
-            
-                <a href="../01writing_haxe/about.html">
+                <a href="../01writing_haxe/example.html">
             
                     
                     Example Writing Haxe
@@ -314,30 +295,11 @@
             
 
             
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.6.1" data-path="../01writing_haxe/example.html">
-            
-                <a href="../01writing_haxe/example.html">
-            
-                    
-                    How to
-            
-                </a>
-            
-
-            
         </li>
     
-
-            </ul>
+        <li class="chapter active" data-level="1.7" data-path="example.html">
             
-        </li>
-    
-        <li class="chapter " data-level="1.7" data-path="about.html">
-            
-                <a href="about.html">
+                <a href="example.html">
             
                     
                     Example Reading C#
@@ -346,30 +308,11 @@
             
 
             
-            <ul class="articles">
-                
-    
-        <li class="chapter active" data-level="1.7.1" data-path="example.html">
-            
-                <a href="example.html">
-            
-                    
-                    How to
-            
-                </a>
-            
-
-            
         </li>
     
-
-            </ul>
+        <li class="chapter " data-level="1.8" data-path="../02reading_haxe/example.html">
             
-        </li>
-    
-        <li class="chapter " data-level="1.8" data-path="../02reading_haxe/about.html">
-            
-                <a href="../02reading_haxe/about.html">
+                <a href="../02reading_haxe/example.html">
             
                     
                     Example Reading Haxe
@@ -377,25 +320,6 @@
                 </a>
             
 
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.8.1" data-path="../02reading_haxe/example.html">
-            
-                <a href="../02reading_haxe/example.html">
-            
-                    
-                    How to
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
             
         </li>
     
@@ -603,7 +527,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >How to</a>
+        <a href=".." >Example Reading C#</a>
     </h1>
 </div>
 
@@ -619,7 +543,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="example"><a name="example" class="plugin-anchor" href="#example"><i class="fa fa-link" aria-hidden="true"></i></a>Example</h1>
-<p>Simply write to a file.</p>
+<p>Simply write and read a file.</p>
 <h2 id="how-to-start"><a name="how-to-start" class="plugin-anchor" href="#how-to-start"><i class="fa fa-link" aria-hidden="true"></i></a>How to start</h2>
 <p>Create a folder named <strong>foobar</strong> (please use a better name; any name will do) and create folders <strong>bin</strong> and <strong>src</strong>.
 See example below:</p>
@@ -629,23 +553,25 @@ See example below:</p>
     - build.hxml
 </code></pre><h2 id="the-mainhx"><a name="the-mainhx" class="plugin-anchor" href="#the-mainhx"><i class="fa fa-link" aria-hidden="true"></i></a>The Main.hx</h2>
 <p>Open your favorite editor, copy/paste the code and save it in the <code>src</code> folder.</p>
-<pre><code>package ;
+<pre><code>package;
+
+import cs.system.io.File;
+import cs.system.Console;
 
 /**
  * @author Matthijs Kamstra aka [mck]
  */
 class Main {
-    function new(){
-        trace(&quot;C# reading and writing Example&quot;);
+    function new() {
+        Console.WriteLine(&quot;C# writing example, native&quot;);
+        // @source: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file
+        var str:String = &apos;Hello World!\nWritten on: &apos; + Date.now().toString();
+        // WriteAllText creates a file, writes the specified string to the file,
+        // and then closes the file.    You do NOT need to call Flush() or Close().
+        File.WriteAllText(&quot;hello.txt&quot;, str);
 
-        var str:String = &apos;Writing and reading a simple text file.!\nWritten on: &apos; + Date.now().toString();
-
-        // write the file the Haxe way: will work on sys targets (lua, python, neko, cpp, hl, php, java, cs)
-        sys.io.File.saveContent(&apos;hello.txt&apos;, str);
-
-        // read the file
-        var content = sys.io.File.getContent(&apos;hello.txt&apos;);
-        trace (content);
+        var content = File.ReadAllText(&quot;hello.txt&quot;);
+        Console.WriteLine(content);
     }
 
     static public function main() {
@@ -698,12 +624,12 @@ This is the short version, you want to chech out the full version open this <a h
 
             
                 
-                <a href="about.html" class="navigation navigation-prev " aria-label="Previous page: Example Reading C#">
+                <a href="../01writing_haxe/example.html" class="navigation navigation-prev " aria-label="Previous page: Example Writing Haxe">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../02reading_haxe/about.html" class="navigation navigation-next " aria-label="Next page: Example Reading Haxe">
+                <a href="../02reading_haxe/example.html" class="navigation navigation-next " aria-label="Next page: Example Reading Haxe">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -714,7 +640,7 @@ This is the short version, you want to chech out the full version open this <a h
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"How to","level":"1.7.1","depth":2,"next":{"title":"Example Reading Haxe","level":"1.8","depth":1,"path":"02reading_haxe/about.md","ref":"02reading_haxe/about.md","articles":[{"title":"How to","level":"1.8.1","depth":2,"path":"02reading_haxe/example.md","ref":"02reading_haxe/example.md","articles":[]}]},"previous":{"title":"Example Reading C#","level":"1.7","depth":1,"path":"02reading_cs/about.md","ref":"02reading_cs/about.md","articles":[{"title":"How to","level":"1.7.1","depth":2,"path":"02reading_cs/example.md","ref":"02reading_cs/example.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":">=2.0.0","theme":"default","variables":{},"plugins":["edit-link","disqus","ga","anchors"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"haxe-and-unity"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-67866831-6"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/MatthijsKamstra/haxeandunity/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"intro.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02reading_cs/example.md","mtime":"2019-05-27T20:15:32.173Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-27T20:28:27.178Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Example Reading C#","level":"1.7","depth":1,"next":{"title":"Example Reading Haxe","level":"1.8","depth":1,"path":"02reading_haxe/example.md","ref":"02reading_haxe/example.md","articles":[]},"previous":{"title":"Example Writing Haxe","level":"1.6","depth":1,"path":"01writing_haxe/example.md","ref":"01writing_haxe/example.md","articles":[]},"dir":"ltr"},"config":{"gitbook":">=2.0.0","theme":"default","variables":{},"plugins":["edit-link","disqus","ga","anchors"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"haxe-and-unity"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-67866831-6"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/MatthijsKamstra/haxeandunity/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"intro.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02reading_cs/example.md","mtime":"2019-05-28T08:50:18.586Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-28T09:45:03.554Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
