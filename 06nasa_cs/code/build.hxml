@@ -1,0 +1,10 @@
+-lib haxelow
+-cp src
+-main Main
+-cs out
+-dce full
+
+--next
+
+-cmd cd out/bin
+-cmd mono Main.exe
