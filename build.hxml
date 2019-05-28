@@ -50,5 +50,12 @@ build.hxml
 build.hxml
 -cmd echo "│ ├── 04haxelow/code"
 
+# use json
+-cmd cd ../../../../
+-cmd cd 08json/code/
+--next
+build.hxml
+-cmd echo "│ ├── 08json/code"
+
 
 -cmd echo "└── Finished Haxe build"
