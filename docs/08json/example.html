@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>More like this · GitBook</title>
+        <title>How to · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,8 +65,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="../20build/about.md" />
     
-    <link rel="prev" href="follow.html" />
+    
+    <link rel="prev" href="about.html" />
     
 
     </head>
@@ -353,9 +355,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10" data-path="../08json/about.html">
+        <li class="chapter " data-level="1.10" data-path="about.html">
             
-                <a href="../08json/about.html">
+                <a href="about.html">
             
                     
                     Example Json
@@ -367,9 +369,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.10.1" data-path="../08json/example.html">
+        <li class="chapter active" data-level="1.10.1" data-path="example.html">
             
-                <a href="../08json/example.html">
+                <a href="example.html">
             
                     
                     How to
@@ -431,9 +433,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.12.1" data-path="follow.html">
+        <li class="chapter " data-level="1.12.1" data-path="../resources/follow.html">
             
-                <a href="follow.html">
+                <a href="../resources/follow.html">
             
                     
                     Who to follow
@@ -444,9 +446,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.12.2" data-path="more.html">
+        <li class="chapter " data-level="1.12.2" data-path="../resources/more.html">
             
-                <a href="more.html">
+                <a href="../resources/more.html">
             
                     
                     More like this
@@ -557,7 +559,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >More like this</a>
+        <a href=".." >How to</a>
     </h1>
 </div>
 
@@ -572,20 +574,87 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="more-more-more"><a name="more-more-more" class="plugin-anchor" href="#more-more-more"><i class="fa fa-link" aria-hidden="true"></i></a>More more more!!!!</h1>
-<p>So you want more...</p>
-<h2 id="haxe-and-nodejs"><a name="haxe-and-nodejs" class="plugin-anchor" href="#haxe-and-nodejs"><i class="fa fa-link" aria-hidden="true"></i></a>Haxe and Node.js</h2>
-<p><img src="../img/haxe_nodejs_logos.png" alt="Haxe logo"></p>
-<p><a href="http://matthijskamstra.github.io/haxenode/" target="_blank">haxenode</a></p>
-<h2 id="haxe-and-javascript"><a name="haxe-and-javascript" class="plugin-anchor" href="#haxe-and-javascript"><i class="fa fa-link" aria-hidden="true"></i></a>Haxe and JavaScript</h2>
-<p><img src="../img/haxe_javascript_logos.png" alt="Haxe logo"></p>
-<p><a href="http://matthijskamstra.github.io/haxejs/" target="_blank">haxejs</a></p>
-<h2 id="haxe-and-php"><a name="haxe-and-php" class="plugin-anchor" href="#haxe-and-php"><i class="fa fa-link" aria-hidden="true"></i></a>Haxe and PHP</h2>
-<p><img src="../img/haxe_php_logos.png" alt="Haxe logo"></p>
-<p><a href="http://matthijskamstra.github.io/haxephp/" target="_blank">haxephp</a></p>
-<h2 id="haxe-and-python"><a name="haxe-and-python" class="plugin-anchor" href="#haxe-and-python"><i class="fa fa-link" aria-hidden="true"></i></a>Haxe and Python</h2>
-<p><img src="../img/haxe_python_logos.png" alt="Haxe logo"></p>
-<p><a href="http://matthijskamstra.github.io/haxepython/" target="_blank">haxepython</a></p>
+                                <h1 id="example-json"><a name="example-json" class="plugin-anchor" href="#example-json"><i class="fa fa-link" aria-hidden="true"></i></a>Example json</h1>
+<p>I have created the <a href="https://github.com/MatthijsKamstra/haxeunity/tree/master/08json/code/bin/www/assets/users.json" target="_blank">user.json</a> with <a href="http://jsonplaceholder.typicode.com/users" target="_blank">http://jsonplaceholder.typicode.com/users</a>.</p>
+<p>Check the <a href="https://github.com/MatthijsKamstra/haxeunity/tree/master/08json/code" target="_blank">code folder</a> for more comments.</p>
+<p>In this example we are going to read and use a <code>.json</code> file.</p>
+<h2 id="how-to-start"><a name="how-to-start" class="plugin-anchor" href="#how-to-start"><i class="fa fa-link" aria-hidden="true"></i></a>How to start</h2>
+<p>Create a folder named <strong>foobar</strong> (please use a better name; any name will do) and create folders <strong>assets</strong> and <strong>src</strong>.
+See example below:</p>
+<pre><code>+ foobar
+    + assets
+        - users.json
+    + src
+        - Main.hx
+    - build.hxml
+</code></pre><h2 id="the-mainhx"><a name="the-mainhx" class="plugin-anchor" href="#the-mainhx"><i class="fa fa-link" aria-hidden="true"></i></a>The Main.hx</h2>
+<p>This example is getting to big to post here, so if you want to check out the complete file go and check out <a href="https://github.com/MatthijsKamstra/haxeunity/tree/master/08json/code/Main.hx" target="_blank">Main.hx</a></p>
+<p>So the first part of this code is loading the <code>json</code> file:</p>
+<pre><code>var path = Sys.getCwd() + &apos;/assets/users.json&apos;;
+
+if(sys.FileSystem.exists(path)){
+    var str : String = sys.io.File.getContent(path);
+} else {
+    trace (&apos;ERROR: there is not file: $path&apos;);
+}
+</code></pre><p>convert data (String) to a <code>json</code> file:
+<a href="http://api.haxe.org/haxe/Json.html" target="_blank">http://api.haxe.org/haxe/Json.html</a></p>
+<pre><code class="lang-haxe">    <span class="hljs-comment">// trace(&apos;str: $str&apos;);</span>
+    json = haxe.Json.parse(str);
+</code></pre>
+<p>And then it&apos;s possible to convert the <code>json</code> to usable input:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">for</span> (i <span class="hljs-keyword">in</span> <span class="hljs-number">0</span> ... json.length)
+{
+    <span class="hljs-keyword">var</span> _user = json[i];
+    <span class="hljs-keyword">trace</span> ( <span class="hljs-string">&quot;Name: &quot;</span> + _user.name );
+}
+</code></pre>
+<p>To make that easier I use <a href="http://haxe.org/manual/type-system-typedef.html" target="_blank"><code>typedef</code></a></p>
+<p>We convert the json data to <code>User</code> so when we use a IDE it will use autocompletion</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">typedef</span> User =
+{
+    <span class="hljs-keyword">var</span> id : Int; <span class="hljs-comment">// 1</span>
+    <span class="hljs-keyword">var</span> name : String; <span class="hljs-comment">// Leanne Graham</span>
+    <span class="hljs-keyword">var</span> username : String; <span class="hljs-comment">// Bret</span>
+    <span class="hljs-keyword">var</span> email : String; <span class="hljs-comment">// Sincere@april.biz</span>
+    <span class="hljs-keyword">var</span> address : {
+          <span class="hljs-keyword">var</span> street : String; <span class="hljs-comment">// Kulas Light</span>
+          <span class="hljs-keyword">var</span> suite : String; <span class="hljs-comment">// Apt. 556</span>
+          <span class="hljs-keyword">var</span> city : String; <span class="hljs-comment">// Gwenborough</span>
+          <span class="hljs-keyword">var</span> zipcode : String; <span class="hljs-comment">// 92998-3874</span>
+          <span class="hljs-keyword">var</span> geo : {
+            <span class="hljs-keyword">var</span> lat : String; <span class="hljs-comment">// -37.3159</span>
+            <span class="hljs-keyword">var</span> lng : String; <span class="hljs-comment">// 81.1496</span>
+          };
+    };
+    <span class="hljs-keyword">var</span> phone : String; <span class="hljs-comment">// 1-770-736-8031 x56442</span>
+    <span class="hljs-keyword">var</span> website : String; <span class="hljs-comment">// hildegard.org</span>
+    <span class="hljs-keyword">var</span> company : {
+          <span class="hljs-keyword">var</span> name : String; <span class="hljs-comment">// Romaguera-Crona</span>
+          <span class="hljs-keyword">var</span> catchPhrase : String; <span class="hljs-comment">// Multi-layered client-server neural-net</span>
+          <span class="hljs-keyword">var</span> bs : String; <span class="hljs-comment">// harness real-time e-markets</span>
+    };
+}
+</code></pre>
+<h2 id="the-haxe-build-file-buildhxml"><a name="the-haxe-build-file-buildhxml" class="plugin-anchor" href="#the-haxe-build-file-buildhxml"><i class="fa fa-link" aria-hidden="true"></i></a>The Haxe build file, build.hxml</h2>
+<p>Copy and past the following lines in a document named <code>build.hxml</code>
+This is the short version, you want to chech out the full version open this <a href="../code/build.hxml">file</a>;</p>
+<pre><code># // build.hxml
+-cp src
+-main Main
+-cs out
+-dce full
+--next
+-cmd cd out/bin
+-cmd mono Main.exe
+</code></pre><h2 id="build-c-with-haxe-and-start-export-with-mono"><a name="build-c-with-haxe-and-start-export-with-mono" class="plugin-anchor" href="#build-c-with-haxe-and-start-export-with-mono"><i class="fa fa-link" aria-hidden="true"></i></a>Build C# with Haxe and start export with mono</h2>
+<p>To finish and see what we have, build the file and see the result</p>
+<ol>
+<li>Open your terminal</li>
+<li><code>cd</code> to the correct folder where you have saved the <code>build.hxml</code></li>
+<li>type <code>haxe build.hxml</code></li>
+<li>press enter</li>
+</ol>
 
                                 
                                 </section>
@@ -613,10 +682,14 @@
 
             
                 
-                <a href="follow.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Who to follow">
+                <a href="about.html" class="navigation navigation-prev " aria-label="Previous page: Example Json">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="../20build/about.md" class="navigation navigation-next " aria-label="Next page: Example hxml">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -625,7 +698,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"More like this","level":"1.12.2","depth":2,"next":{"title":"Try Haxe!","level":"1.12.3","depth":2,"url":"https://try.haxe.org/","ref":"https://try.haxe.org/","articles":[]},"previous":{"title":"Who to follow","level":"1.12.1","depth":2,"path":"resources/follow.md","ref":"resources/follow.md","articles":[]},"dir":"ltr"},"config":{"gitbook":">=2.0.0","theme":"default","variables":{},"plugins":["edit-link","disqus","ga","anchors"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"haxe-and-unity"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-67866831-6"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/MatthijsKamstra/haxeandunity/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"intro.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resources/more.md","mtime":"2018-01-08T23:37:51.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-28T10:32:35.467Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"How to","level":"1.10.1","depth":2,"next":{"title":"Example hxml","level":"1.11","depth":1,"path":"20build/about.md","ref":"20build/about.md","articles":[{"title":"How to","level":"1.11.1","depth":2,"path":"20build/example.md","ref":"20build/example.md","articles":[]}]},"previous":{"title":"Example Json","level":"1.10","depth":1,"path":"08json/about.md","ref":"08json/about.md","articles":[{"title":"How to","level":"1.10.1","depth":2,"path":"08json/example.md","ref":"08json/example.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":">=2.0.0","theme":"default","variables":{},"plugins":["edit-link","disqus","ga","anchors"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"haxe-and-unity"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-67866831-6"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/MatthijsKamstra/haxeandunity/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"intro.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"08json/example.md","mtime":"2019-05-28T10:30:18.062Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-28T10:32:35.467Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
