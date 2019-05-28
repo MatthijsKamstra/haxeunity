@@ -50,6 +50,13 @@ build.hxml
 build.hxml
 -cmd echo "│ ├── 04haxelow/code"
 
+# api call
+-cmd cd ../../../../
+-cmd cd 06quote_haxe/code/
+--next
+build.hxml
+-cmd echo "│ ├── 06quote_haxe/code"
+
 # use json
 -cmd cd ../../../../
 -cmd cd 08json/code/

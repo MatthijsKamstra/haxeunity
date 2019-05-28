@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Resources · GitBook</title>
+        <title>Example api Haxe · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../00helloworld/about.html" />
+    <link rel="next" href="../08json/about.html" />
     
     
-    <link rel="prev" href="download.html" />
+    <link rel="prev" href="../04haxelow/example.html" />
     
 
     </head>
@@ -194,9 +194,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="about.html">
+        <li class="chapter " data-level="1.3" data-path="../haxecs/about.html">
             
-                <a href="about.html">
+                <a href="../haxecs/about.html">
             
                     
                     Haxe and Unity/C#
@@ -208,9 +208,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="download.html">
+        <li class="chapter " data-level="1.3.1" data-path="../haxecs/download.html">
             
-                <a href="download.html">
+                <a href="../haxecs/download.html">
             
                     
                     Download
@@ -221,9 +221,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.2" data-path="resource.html">
+        <li class="chapter " data-level="1.3.2" data-path="../haxecs/resource.html">
             
-                <a href="resource.html">
+                <a href="../haxecs/resource.html">
             
                     
                     Resources
@@ -355,9 +355,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10" data-path="../06quote_haxe/example.html">
+        <li class="chapter active" data-level="1.10" data-path="example.html">
             
-                <a href="../06quote_haxe/example.html">
+                <a href="example.html">
             
                     
                     Example api Haxe
@@ -572,7 +572,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Resources</a>
+        <a href=".." >Example api Haxe</a>
     </h1>
 </div>
 
@@ -587,8 +587,64 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="resources"><a name="resources" class="plugin-anchor" href="#resources"><i class="fa fa-link" aria-hidden="true"></i></a>Resources</h1>
-<p>You can find more information about the core language API, here: <a href="http://api.haxe.org/cs/" target="_blank">http://api.haxe.org/cs/</a></p>
+                                <h1 id="example-quote"><a name="example-quote" class="plugin-anchor" href="#example-quote"><i class="fa fa-link" aria-hidden="true"></i></a>Example Quote</h1>
+<p>I run into some problems here.
+For most sys targets a <code>https</code> call works, but not for the C# target.</p>
+<p>When I was looking for a solution closer to C# I ran into problems that had to do with the .NET lib you need to install.
+Hmmm, and that was the moment that I was no longer looking</p>
+<p>There is a solution, but I am not the person to fix it.</p>
+<p>To make this example working, I choose a api that doesn&apos;t need Authentication and <code>http</code>... (again <code>https</code> doesn&apos;t work)</p>
+<p>In this case we will use: <a href="http://forismatic.com/en/api/" target="_blank">http://forismatic.com/en/api/</a> an api that hands out quotes.</p>
+<h2 id="how-to-start"><a name="how-to-start" class="plugin-anchor" href="#how-to-start"><i class="fa fa-link" aria-hidden="true"></i></a>How to start</h2>
+<p>Create a folder named <strong>foobar</strong> (please use a better name; any name will do) and create folders <strong>bin</strong> and <strong>src</strong>.
+See example below:</p>
+<pre><code>+ foobar
+    + src
+        - Main.hx
+    - build.hxml
+</code></pre><h2 id="the-mainhx"><a name="the-mainhx" class="plugin-anchor" href="#the-mainhx"><i class="fa fa-link" aria-hidden="true"></i></a>The Main.hx</h2>
+<p>Open your favorite editor, copy/paste the code and save it in the <code>src</code> folder.
+Check the complete <a href="https://github.com/MatthijsKamstra/haxeunity/tree/master/06quote_haxe/code/src/Main.hx" target="_blank">Main.hx</a>.</p>
+<p>This is the most interesting part:</p>
+<pre><code>var req = new haxe.Http(&apos;http://api.forismatic.com/api/1.0/?method=getQuote&amp;format=json&amp;lang=en&apos;);
+
+req.onData = function(data:String) {
+    try {
+        var json:ForismaticObj = haxe.Json.parse(data);
+        output(json);
+    } catch (e:Dynamic) {
+        trace(e);
+    }
+}
+
+req.onError = function(error:String) {
+    trace(&apos;error: $error&apos;);
+}
+
+req.onStatus = function(status:Int) {
+    trace(&apos;status: $status&apos;);
+}
+
+req.request(isPost); // false=GET, true=POST
+</code></pre><h2 id="the-haxe-build-file-buildhxml"><a name="the-haxe-build-file-buildhxml" class="plugin-anchor" href="#the-haxe-build-file-buildhxml"><i class="fa fa-link" aria-hidden="true"></i></a>The Haxe build file, build.hxml</h2>
+<p>Copy and past the following lines in a document named <code>build.hxml</code>
+This is the short version, you want to chech out the full version open this <a href="../code/build.hxml">file</a>;</p>
+<pre><code># // build.hxml
+-cp src
+-main Main
+-cs out
+-dce full
+--next
+-cmd cd out/bin
+-cmd mono Main.exe
+</code></pre><h2 id="build-c-with-haxe-and-start-export-with-mono"><a name="build-c-with-haxe-and-start-export-with-mono" class="plugin-anchor" href="#build-c-with-haxe-and-start-export-with-mono"><i class="fa fa-link" aria-hidden="true"></i></a>Build C# with Haxe and start export with mono</h2>
+<p>To finish and see what we have, build the file and see the result</p>
+<ol>
+<li>Open your terminal</li>
+<li><code>cd</code> to the correct folder where you have saved the <code>build.hxml</code></li>
+<li>type <code>haxe build.hxml</code></li>
+<li>press enter</li>
+</ol>
 
                                 
                                 </section>
@@ -616,12 +672,12 @@
 
             
                 
-                <a href="download.html" class="navigation navigation-prev " aria-label="Previous page: Download">
+                <a href="../04haxelow/example.html" class="navigation navigation-prev " aria-label="Previous page: How to">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../00helloworld/about.html" class="navigation navigation-next " aria-label="Next page: Example Hello World">
+                <a href="../08json/about.html" class="navigation navigation-next " aria-label="Next page: Example Json">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -632,7 +688,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Resources","level":"1.3.2","depth":2,"next":{"title":"Example Hello World","level":"1.4","depth":1,"path":"00helloworld/about.md","ref":"00helloworld/about.md","articles":[{"title":"How to","level":"1.4.1","depth":2,"path":"00helloworld/example.md","ref":"00helloworld/example.md","articles":[]}]},"previous":{"title":"Download","level":"1.3.1","depth":2,"path":"haxecs/download.md","ref":"haxecs/download.md","articles":[]},"dir":"ltr"},"config":{"gitbook":">=2.0.0","theme":"default","variables":{},"plugins":["edit-link","disqus","ga","anchors"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"haxe-and-unity"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-67866831-6"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/MatthijsKamstra/haxeandunity/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"intro.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"haxecs/resource.md","mtime":"2019-05-27T14:09:41.115Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-28T12:45:40.854Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Example api Haxe","level":"1.10","depth":1,"next":{"title":"Example Json","level":"1.11","depth":1,"path":"08json/about.md","ref":"08json/about.md","articles":[{"title":"How to","level":"1.11.1","depth":2,"path":"08json/example.md","ref":"08json/example.md","articles":[]}]},"previous":{"title":"How to","level":"1.9.1","depth":2,"path":"04haxelow/example.md","ref":"04haxelow/example.md","articles":[]},"dir":"ltr"},"config":{"gitbook":">=2.0.0","theme":"default","variables":{},"plugins":["edit-link","disqus","ga","anchors"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"haxe-and-unity"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-67866831-6"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/MatthijsKamstra/haxeandunity/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"intro.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"06quote_haxe/example.md","mtime":"2019-05-28T12:27:35.906Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-28T12:45:40.854Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
