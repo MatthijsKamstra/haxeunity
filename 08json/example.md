@@ -27,7 +27,7 @@ See example below:
 
 ## The Main.hx
 
-This example is getting to big to post here, so if you want to check out the complete file go and check out [Main.hx](https://github.com/MatthijsKamstra/haxeunity/tree/master/08json/code/Main.hx)
+This example is getting to big to post here, so if you want to check out the complete file go and check out [Main.hx](https://github.com/MatthijsKamstra/haxeunity/tree/master/08json/code/src/Main.hx)
 
 So the first part of this code is loading the `json` file:
 
