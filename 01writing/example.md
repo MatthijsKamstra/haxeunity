@@ -1,11 +1,11 @@
 # Writing example
 
 
-Simple write to a file. Can't make it more glamours.
+Simple write to a file. Can't make it more glamorous.
 In this example we will use Haxe specific code that can be used for other `sys` targets (lua, python, neko, cpp, hl, php, java, cs) as well.
 
 For this example I used the "unity-haxe-helloworld" Nadako made: <https://github.com/nadako/unity-haxe-helloworld>.
-But I don't want all these files in my documentation, so for this example I use the same folder structure but won't use the unity files (you should use the files Nadako profided)
+But I don't want all these files in my documentation, so for this example I use the same folder structure but won't use the unity files (you should use the files Nadako provided)
 
 ```
 + unity-haxe-helloworld
