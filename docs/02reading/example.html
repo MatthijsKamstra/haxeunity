@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Hello world · GitBook</title>
+        <title>Example Reading · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="learn-haxe.html" />
+    <link rel="next" href="../20build/about.md" />
     
     
-    <link rel="prev" href="choosing-a-code-editor.html" />
+    <link rel="prev" href="../01writing/example.html" />
     
 
     </head>
@@ -110,9 +110,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="about.html">
+        <li class="chapter " data-level="1.2" data-path="../haxe/about.html">
             
-                <a href="about.html">
+                <a href="../haxe/about.html">
             
                     
                     Haxe basics
@@ -124,9 +124,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="quick-install.html">
+        <li class="chapter " data-level="1.2.1" data-path="../haxe/quick-install.html">
             
-                <a href="quick-install.html">
+                <a href="../haxe/quick-install.html">
             
                     
                     Quick install
@@ -137,9 +137,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="installation.html">
+        <li class="chapter " data-level="1.2.2" data-path="../haxe/installation.html">
             
-                <a href="installation.html">
+                <a href="../haxe/installation.html">
             
                     
                     Installation
@@ -150,9 +150,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="choosing-a-code-editor.html">
+        <li class="chapter " data-level="1.2.3" data-path="../haxe/choosing-a-code-editor.html">
             
-                <a href="choosing-a-code-editor.html">
+                <a href="../haxe/choosing-a-code-editor.html">
             
                     
                     Code editor
@@ -163,9 +163,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.4" data-path="hello-world.html">
+        <li class="chapter " data-level="1.2.4" data-path="../haxe/hello-world.html">
             
-                <a href="hello-world.html">
+                <a href="../haxe/hello-world.html">
             
                     
                     Hello world
@@ -176,9 +176,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="learn-haxe.html">
+        <li class="chapter " data-level="1.2.5" data-path="../haxe/learn-haxe.html">
             
-                <a href="learn-haxe.html">
+                <a href="../haxe/learn-haxe.html">
             
                     
                     Learn Haxe
@@ -284,9 +284,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="../02reading/example.html">
+        <li class="chapter active" data-level="1.6" data-path="example.html">
             
-                <a href="../02reading/example.html">
+                <a href="example.html">
             
                     
                     Example Reading
@@ -469,7 +469,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Hello world</a>
+        <a href=".." >Example Reading</a>
     </h1>
 </div>
 
@@ -484,51 +484,54 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="hello-world"><a name="hello-world" class="plugin-anchor" href="#hello-world"><i class="fa fa-link" aria-hidden="true"></i></a>Hello world</h1>
-<p><img src="../img/helloworld.png" alt=""></p>
-<p>Developing JavaScript code is easy with Haxe. Let&apos;s see our first HelloWorld example :</p>
-<pre><code class="lang-haxe"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>{
-    <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">trace</span>(<span class="hljs-string">&quot;Hello World !&quot;</span>);
+                                <h1 id="example"><a name="example" class="plugin-anchor" href="#example"><i class="fa fa-link" aria-hidden="true"></i></a>Example</h1>
+<p>Simply write and read a file.</p>
+<h2 id="how-to-start"><a name="how-to-start" class="plugin-anchor" href="#how-to-start"><i class="fa fa-link" aria-hidden="true"></i></a>How to start</h2>
+<p>Create a folder named <strong>foobar</strong> (please use a better name; any name will do) and create folders <strong>bin</strong> and <strong>src</strong>.
+See example below:</p>
+<pre><code>+ foobar
+    + bin
+    + src
+        - Main.hx
+    - build.hxml
+</code></pre><h2 id="the-mainhx"><a name="the-mainhx" class="plugin-anchor" href="#the-mainhx"><i class="fa fa-link" aria-hidden="true"></i></a>The Main.hx</h2>
+<p>Open your favorite editor, copy/paste the code and save it in the <code>src</code> folder.</p>
+<pre><code>class Main {
+    function new(){
+        trace(&quot;Reading and writing example&quot;);
+
+        var str:String = &apos;Writing and reading a simple text file.!\nWritten on: &apos; + Date.now().toString();
+
+        // write the file
+        sys.io.File.saveContent(&apos;hello.txt&apos;, str);
+
+        // read the file
+        var content = sys.io.File.getContent(&apos;hello.txt&apos;);
+        trace (content);
+    }
+
+    static public function main() {
+        var main = new Main();
     }
 }
-</code></pre>
-<p>Put this class into a file named <code>Test.hx</code> and create the file <code>compile.hxml</code> in the same directory with the following content:</p>
-<pre><code>-js test.js
--main Test
-</code></pre><p>To compile open you terminal and type:</p>
-<pre><code>cd
-</code></pre><p>And drag the folder where you saved the files, into the terminal.
-It will look something like this:</p>
-<pre><code>cd /path/to/folder/
-</code></pre><p>Press enter and type:</p>
-<pre><code>haxe compile.hxml
-</code></pre><p>If an error occurs, the terminal will display that.
-If everything went smoothly like it should, this will produce a <code>test.js</code> file that can be embedded into an HTML page such as this one :</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Haxe JS<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;test.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-
-<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
-</code></pre>
+</code></pre><h2 id="the-haxe-build-file-buildhxml"><a name="the-haxe-build-file-buildhxml" class="plugin-anchor" href="#the-haxe-build-file-buildhxml"><i class="fa fa-link" aria-hidden="true"></i></a>The Haxe build file, build.hxml</h2>
+<p>I use one <a href="../code/build.hxml"><code>build.hxml</code></a> to build all other build files:</p>
+<ul>
+<li>build_cpp.hxml</li>
+<li>build_cs.hxml</li>
+<li>build_java.hxml</li>
+<li>build_node.hxml</li>
+<li>build_python.hxml</li>
+</ul>
+<p>Check out the files in the <a href="../code"><code>/code</code></a>-folder.</p>
+<h2 id="build-all-targets-with-haxe-and-start-the-specific-target"><a name="build-all-targets-with-haxe-and-start-the-specific-target" class="plugin-anchor" href="#build-all-targets-with-haxe-and-start-the-specific-target"><i class="fa fa-link" aria-hidden="true"></i></a>Build all targets with Haxe and start the specific target</h2>
+<p>To finish and see what we have, build the file and see the result</p>
 <ol>
-<li>Put this code into a <code>test.html</code> file.</li>
-<li>Open it with your browser (like Google Chrome)</li>
-<li>It will display <strong>Hello World</strong> in your Console.</li>
-<li>(Google Chrome &gt; Hamburger menu &gt; More Tools &gt; Developers tools)</li>
+<li>Open your terminal</li>
+<li><code>cd</code> to the correct folder where you have saved the <code>build.hxml</code></li>
+<li>type <code>haxe build.hxml</code></li>
+<li>press enter</li>
 </ol>
-<h2 id="tryhaxe"><a name="tryhaxe" class="plugin-anchor" href="#tryhaxe"><i class="fa fa-link" aria-hidden="true"></i></a>try.haxe</h2>
-<p>If you want to experiment with this code, you can do that without installing Haxe.</p>
-<p>Below you can see and try the same example code at <a href="https://try.haxe.org/" target="_blank">try.haxe.org</a> without installing Haxe.</p>
-<iframe src="https://try.haxe.org/embed/197E1" width="100%" height="300" frameborder="no" allowfullscreen>
-    <a href="https://try.haxe.org/#197E1" target="_blank">Try Haxe !</a>
-</iframe>
-
-
-<p><em>Based upon <a href="http://old.haxe.org/doc/start/js" target="_blank">old.haxe.org - manual</a></em></p>
 
                                 
                                 </section>
@@ -556,12 +559,12 @@ If everything went smoothly like it should, this will produce a <code>test.js</c
 
             
                 
-                <a href="choosing-a-code-editor.html" class="navigation navigation-prev " aria-label="Previous page: Code editor">
+                <a href="../01writing/example.html" class="navigation navigation-prev " aria-label="Previous page: Example Writing">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="learn-haxe.html" class="navigation navigation-next " aria-label="Next page: Learn Haxe">
+                <a href="../20build/about.md" class="navigation navigation-next " aria-label="Next page: Example hxml">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -572,7 +575,7 @@ If everything went smoothly like it should, this will produce a <code>test.js</c
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Hello world","level":"1.2.4","depth":2,"next":{"title":"Learn Haxe","level":"1.2.5","depth":2,"path":"haxe/learn-haxe.md","ref":"haxe/learn-haxe.md","articles":[]},"previous":{"title":"Code editor","level":"1.2.3","depth":2,"path":"haxe/choosing-a-code-editor.md","ref":"haxe/choosing-a-code-editor.md","articles":[]},"dir":"ltr"},"config":{"gitbook":">=2.0.0","theme":"default","variables":{},"plugins":["edit-link","disqus","ga","anchors"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"haxe-and-unity"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-67866831-6"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/MatthijsKamstra/haxeandunity/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"intro.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"haxe/hello-world.md","mtime":"2017-12-08T09:56:49.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-03T20:38:37.813Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Example Reading","level":"1.6","depth":1,"next":{"title":"Example hxml","level":"1.7","depth":1,"path":"20build/about.md","ref":"20build/about.md","articles":[{"title":"How to","level":"1.7.1","depth":2,"path":"20build/example.md","ref":"20build/example.md","articles":[]}]},"previous":{"title":"Example Writing","level":"1.5","depth":1,"path":"01writing/example.md","ref":"01writing/example.md","articles":[]},"dir":"ltr"},"config":{"gitbook":">=2.0.0","theme":"default","variables":{},"plugins":["edit-link","disqus","ga","anchors"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"haxe-and-unity"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-67866831-6"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/MatthijsKamstra/haxeandunity/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"intro.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02reading/example.md","mtime":"2019-05-29T21:34:04.865Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-03T20:38:37.813Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
