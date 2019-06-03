@@ -27,3 +27,5 @@ _test
 00helloworld/code/out
 */code/out
 */*/code/out
+# unity specifics
+*/code/Assets/Code
