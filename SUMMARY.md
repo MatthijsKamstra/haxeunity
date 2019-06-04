@@ -12,6 +12,8 @@ This is the summary of my book.
 * [Haxe and Unity/C#](haxecs/about.md)
    * [Download](haxecs/download.md)
    * [Resources](haxecs/resource.md)
+* [Setup Unity and Haxe](00setup/example.md)
+* [Example setup trace](00trace/example.md)
 * [Example Hello World](00helloworld/about.md)
    * [How to](00helloworld/example.md)
 * [Example Writing](01writing/example.md)
