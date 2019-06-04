@@ -68,7 +68,7 @@
     <link rel="next" href="../01writing/example.html" />
     
     
-    <link rel="prev" href="about.md" />
+    <link rel="prev" href="about.html" />
     
 
     </head>
@@ -239,9 +239,35 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="about.md">
+        <li class="chapter " data-level="1.4" data-path="../00setup/example.html">
             
-                <span>
+                <a href="../00setup/example.html">
+            
+                    
+                    Setup Unity and Haxe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../00trace/example.html">
+            
+                <a href="../00trace/example.html">
+            
+                    
+                    Example setup trace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="about.html">
+            
+                <a href="about.html">
             
                     
                     Example Hello World
@@ -253,7 +279,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1" data-path="example.html">
+        <li class="chapter active" data-level="1.6.1" data-path="example.html">
             
                 <a href="example.html">
             
@@ -271,7 +297,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../01writing/example.html">
+        <li class="chapter " data-level="1.7" data-path="../01writing/example.html">
             
                 <a href="../01writing/example.html">
             
@@ -284,7 +310,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="../02reading/example.html">
+        <li class="chapter " data-level="1.8" data-path="../02reading/example.html">
             
                 <a href="../02reading/example.html">
             
@@ -297,7 +323,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="../20build/about.md">
+        <li class="chapter " data-level="1.9" data-path="../20build/about.md">
             
                 <span>
             
@@ -311,7 +337,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="../20build/example.md">
+        <li class="chapter " data-level="1.9.1" data-path="../20build/example.md">
             
                 <span>
             
@@ -329,7 +355,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" >
+        <li class="chapter " data-level="1.10" >
             
                 <span>
             
@@ -343,7 +369,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.1" data-path="../resources/follow.html">
+        <li class="chapter " data-level="1.10.1" data-path="../resources/follow.html">
             
                 <a href="../resources/follow.html">
             
@@ -356,7 +382,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.2" data-path="../resources/more.html">
+        <li class="chapter " data-level="1.10.2" data-path="../resources/more.html">
             
                 <a href="../resources/more.html">
             
@@ -369,7 +395,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.3" >
+        <li class="chapter " data-level="1.10.3" >
             
                 <a target="_blank" href="https://try.haxe.org/">
             
@@ -382,7 +408,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.4" >
+        <li class="chapter " data-level="1.10.4" >
             
                 <a target="_blank" href="http://community.haxe.org/">
             
@@ -400,7 +426,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9" data-path="../contribute.html">
+        <li class="chapter " data-level="1.11" data-path="../contribute.html">
             
                 <a href="../contribute.html">
             
@@ -413,7 +439,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10" >
+        <li class="chapter " data-level="1.12" >
             
                 <a target="_blank" href="https://github.com/MatthijsKamstra/haxeunity/">
             
@@ -426,7 +452,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11" >
+        <li class="chapter " data-level="1.13" >
             
                 <a target="_blank" href="https://github.com/MatthijsKamstra/haxeunity/issues/2">
             
@@ -486,8 +512,8 @@
                                 
                                 <h1 id="hello-world-example"><a name="hello-world-example" class="plugin-anchor" href="#hello-world-example"><i class="fa fa-link" aria-hidden="true"></i></a>Hello World Example</h1>
 <p>Check the <a href="https://github.com/MatthijsKamstra/haxeunity/tree/master/00helloworld/code" target="_blank">code folder</a> for more comments.
-If you want to know why we are making this? Check out the <a href="about.md">C# helloworld</a>.</p>
-<p>This example will be a bit diferent from most examples I wrote.</p>
+If you want to know why we are making this? Check out the <a href="about.html">about</a>.</p>
+<p>This example will be a bit different from most examples I wrote.</p>
 <p>First the file/folder structure will be different, this because C# in combination with Unity dictates it.
 Normally I would advise to use this folder structure:</p>
 <pre><code>+ foobar
@@ -496,10 +522,8 @@ Normally I would advise to use this folder structure:</p>
         - Main.hx
     - build.hxml
 </code></pre><p>For this example I used the &quot;unity-haxe-helloworld&quot; Nadako made: <a href="https://github.com/nadako/unity-haxe-helloworld" target="_blank">https://github.com/nadako/unity-haxe-helloworld</a>.
-But I don&apos;t want all these files in my documentation, so for this example I use the same folder structure but won&apos;t use the unity files (you should use the files Nadako profided)</p>
+But I don&apos;t want all these files in my documentation, so for this example I use the same folder structure but won&apos;t use the unity files (you should use the files Nadako provided)</p>
 <pre><code>+ unity-haxe-helloworld
-    + Assets
-        + Code
     + Source
         - Main.hx
     - build.hxml
@@ -525,47 +549,20 @@ Main
 <pre><code>-D real-position
 </code></pre><p>This stops the generate <code>#line</code> directives that map C# expression positions to original .hx files. Useful for tracking down issues related to code generation. But I hope I will never need this. So lets not generate this lines.</p>
 <h2 id="the-mainhx"><a name="the-mainhx" class="plugin-anchor" href="#the-mainhx"><i class="fa fa-link" aria-hidden="true"></i></a>The Main.hx</h2>
-<p>Open your favorite editor, copy/paste the code and save it in the <code>src</code> folder.</p>
+<p>Open your favorite editor, copy/paste the code and save it in the <code>Source</code> folder.</p>
 <pre><code class="lang-haxe"><span class="hljs-keyword">package</span>;
 
 <span class="hljs-keyword">import</span> unityengine.*;
 
-<span class="hljs-keyword">import</span> cs.system.Console;
-
 @:nativeGen
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">MonoBehaviour</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Awake</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-comment">// logging via Haxe</span>
-        <span class="hljs-keyword">trace</span>(<span class="hljs-string">&quot;[Haxe] Hello world before trace rewrite&quot;</span>); <span class="hljs-comment">// not visible in Unity</span>
-        <span class="hljs-comment">// write your own trace function suitable for Unity</span>
-        haxe.Log.<span class="hljs-keyword">trace</span> = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(v:Dynamic, ?infos:haxe.PosInfos)</span> </span>{
-            <span class="hljs-keyword">var</span> str = infos.fileName + <span class="hljs-string">&quot;:&quot;</span> + infos.lineNumber + <span class="hljs-string">&quot;: &quot;</span> + v;
-            Debug.Log(str);
-        }
 
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Awake</span><span class="hljs-params">()</span> </span>{
         <span class="hljs-comment">// logging via unity</span>
         Debug.Log(<span class="hljs-string">&apos;[Unity] Hello world&apos;</span>);
-        <span class="hljs-comment">// logging via C#</span>
-        Console.WriteLine(<span class="hljs-string">&quot;[C#] Hello world&quot;</span>);
-        <span class="hljs-comment">// logging via Haxe</span>
-        <span class="hljs-keyword">trace</span>(<span class="hljs-string">&quot;[Haxe] Hello world&quot;</span>);
     }
 }
 </code></pre>
-<p>You can see that we use 3 ways of logging in this file</p>
-<pre><code class="lang-haxe">    Debug.Log(<span class="hljs-string">&apos;[Unity] Hello world&apos;</span>);
-    Console.WriteLine(<span class="hljs-string">&quot;[C#] Hello world&quot;</span>);
-    <span class="hljs-keyword">trace</span>(<span class="hljs-string">&quot;[Haxe] Hello world&quot;</span>);
-</code></pre>
-<p>Only the first one will show up in Unity (<code>Debug.Log(&quot;&quot;)</code>), the others will not.</p>
-<p>But if you want to use the default trace (and the ability to link it back to your original Haxe code &amp; easy removal) in Unity you will need to rewrite the logging a bit:</p>
-<pre><code class="lang-haxe">    haxe.Log.<span class="hljs-keyword">trace</span> = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(v:Dynamic, ?infos:haxe.PosInfos)</span> </span>{
-        <span class="hljs-keyword">var</span> str = infos.fileName + <span class="hljs-string">&quot;:&quot;</span> + infos.lineNumber + <span class="hljs-string">&quot;: &quot;</span> + v;
-        Debug.Log(str);
-    }
-</code></pre>
-<p>This way trace will work via the default Log methode.</p>
-<p>Read more about this subject: <a href="https://haxe.org/manual/debugging-trace-log.html" target="_blank">https://haxe.org/manual/debugging-trace-log.html</a></p>
 
                                 
                                 </section>
@@ -593,7 +590,7 @@ Main
 
             
                 
-                <a href="about.md" class="navigation navigation-prev " aria-label="Previous page: Example Hello World">
+                <a href="about.html" class="navigation navigation-prev " aria-label="Previous page: Example Hello World">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -609,7 +606,7 @@ Main
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"How to","level":"1.4.1","depth":2,"next":{"title":"Example Writing","level":"1.5","depth":1,"path":"01writing/example.md","ref":"01writing/example.md","articles":[]},"previous":{"title":"Example Hello World","level":"1.4","depth":1,"path":"00helloworld/about.md","ref":"00helloworld/about.md","articles":[{"title":"How to","level":"1.4.1","depth":2,"path":"00helloworld/example.md","ref":"00helloworld/example.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":">=2.0.0","theme":"default","variables":{},"plugins":["edit-link","disqus","ga","anchors"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"haxe-and-unity"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-67866831-6"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/MatthijsKamstra/haxeandunity/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"intro.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"00helloworld/example.md","mtime":"2019-06-03T19:44:10.092Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-03T20:38:37.813Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"How to","level":"1.6.1","depth":2,"next":{"title":"Example Writing","level":"1.7","depth":1,"path":"01writing/example.md","ref":"01writing/example.md","articles":[]},"previous":{"title":"Example Hello World","level":"1.6","depth":1,"path":"00helloworld/about.md","ref":"00helloworld/about.md","articles":[{"title":"How to","level":"1.6.1","depth":2,"path":"00helloworld/example.md","ref":"00helloworld/example.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":">=2.0.0","theme":"default","variables":{},"plugins":["edit-link","disqus","ga","anchors"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"haxe-and-unity"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-67866831-6"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/MatthijsKamstra/haxeandunity/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"intro.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"00helloworld/example.md","mtime":"2019-06-04T09:58:27.790Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-04T10:13:41.338Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Example Reading · GitBook</title>
+        <title>Example setup trace · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../20build/about.md" />
+    <link rel="next" href="../00helloworld/about.html" />
     
     
-    <link rel="prev" href="../01writing/example.html" />
+    <link rel="prev" href="../00setup/example.html" />
     
 
     </head>
@@ -252,9 +252,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../00trace/example.html">
+        <li class="chapter active" data-level="1.5" data-path="example.html">
             
-                <a href="../00trace/example.html">
+                <a href="example.html">
             
                     
                     Example setup trace
@@ -310,9 +310,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8" data-path="example.html">
+        <li class="chapter " data-level="1.8" data-path="../02reading/example.html">
             
-                <a href="example.html">
+                <a href="../02reading/example.html">
             
                     
                     Example Reading
@@ -495,7 +495,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Example Reading</a>
+        <a href=".." >Example setup trace</a>
     </h1>
 </div>
 
@@ -510,9 +510,11 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="example-reading"><a name="example-reading" class="plugin-anchor" href="#example-reading"><i class="fa fa-link" aria-hidden="true"></i></a>Example Reading</h1>
-<p>Simply write and read a file. Can&apos;t make it more glamorous.
-In this example we will use Haxe specific code that can be used for other <code>sys</code> targets (lua, python, neko, cpp, hl, php, java, cs) as well.</p>
+                                <h1 id="trace-example"><a name="trace-example" class="plugin-anchor" href="#trace-example"><i class="fa fa-link" aria-hidden="true"></i></a>trace example</h1>
+<p>Loggin is somewhat different in Unity.
+Normally you would use <code>trace</code> for logging in Haxe.
+But the unity target uses a different Logging system, so the normal trace doesn&apos;t show up in Unity.</p>
+<p>The example is going to fix that.</p>
 <p>The short version of the folder structure will not work without the files Unity needs.
 If you want to know more about that, read the <a href="../00setup/example.html">setup</a></p>
 <pre><code>+ unity-haxe-helloworld
@@ -521,34 +523,51 @@ If you want to know more about that, read the <a href="../00setup/example.html">
     - build.hxml
 </code></pre><h2 id="the-mainhx"><a name="the-mainhx" class="plugin-anchor" href="#the-mainhx"><i class="fa fa-link" aria-hidden="true"></i></a>The Main.hx</h2>
 <p>Check out the whole <a href="../code/Source/Main.hx"><code>Main.hx</code></a> for more details.</p>
-<p>That is a lot of code so I will focus on the specific part that writes the file.</p>
-<pre><code class="lang-haxe">    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Awake</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">trace</span>(<span class="hljs-string">&quot;Reading and writing example&quot;</span>);
+<pre><code>package;
 
-        <span class="hljs-keyword">var</span> dataFileName:String = <span class="hljs-string">&quot;hello.txt&quot;</span>;
-        <span class="hljs-keyword">var</span> filePath = Path.join([Application.streamingAssetsPath, dataFileName]);
+import unityengine.*;
 
-        <span class="hljs-comment">// check if this folder exists, if not create!</span>
-        <span class="hljs-keyword">if</span>(!FileSystem.exists(Application.streamingAssetsPath)){
-            FileSystem.createDirectory(Application.streamingAssetsPath);
-            <span class="hljs-keyword">trace</span>(<span class="hljs-string">&apos;&quot;StreamAssets&quot;-folder created!&apos;</span>);
+import cs.system.Console;
+
+@:nativeGen
+class Main extends MonoBehaviour {
+
+    function new (){
+        super();
+        // write your own trace function suitable for Unity
+        haxe.Log.trace = function(v:Dynamic, ?infos:haxe.PosInfos) {
+            var str = infos.fileName + &quot;:&quot; + infos.lineNumber + &quot;: &quot; + v;
+            Debug.Log(str);
         }
+    }
 
-        <span class="hljs-keyword">var</span> str:String = <span class="hljs-string">&apos;Writing and reading a simple text file.!\nWritten on: &apos;</span> + Date.now().toString();
-        File.saveContent(filePath, str);
-        <span class="hljs-keyword">trace</span>(<span class="hljs-string">&apos;${filePath} is generated&apos;</span>);
+    function Awake() {
+        // logging via unity
+        Debug.Log(&apos;[Unity] Hello world&apos;);
+        // logging via C#
+        Console.WriteLine(&quot;[C#] Hello world&quot;);
+        // logging via Haxe
+        trace(&quot;[Haxe] Hello world&quot;);
+    }
 
-        <span class="hljs-comment">// read the file</span>
-        <span class="hljs-keyword">var</span> content = File.getContent(filePath);
-        <span class="hljs-keyword">trace</span> (content);
+    static public function main() {
+        var main = new Main();
+    }
+}
+</code></pre><p>You can see that we use 3 ways of logging in this file</p>
+<pre><code class="lang-haxe">    Debug.Log(<span class="hljs-string">&apos;[Unity] Hello world&apos;</span>);
+    Console.WriteLine(<span class="hljs-string">&quot;[C#] Hello world&quot;</span>);
+    <span class="hljs-keyword">trace</span>(<span class="hljs-string">&quot;[Haxe] Hello world&quot;</span>);
+</code></pre>
+<p>Only the first one will show up in Unity (<code>Debug.Log(&quot;&quot;)</code>), the others will not.</p>
+<p>But if you want to use the default trace (and the ability to link it back to your original Haxe code &amp; easy removal) in Unity you will need to rewrite the logging a bit:</p>
+<pre><code class="lang-haxe">    haxe.Log.<span class="hljs-keyword">trace</span> = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(v:Dynamic, ?infos:haxe.PosInfos)</span> </span>{
+        <span class="hljs-keyword">var</span> str = infos.fileName + <span class="hljs-string">&quot;:&quot;</span> + infos.lineNumber + <span class="hljs-string">&quot;: &quot;</span> + v;
+        Debug.Log(str);
     }
 </code></pre>
-<p>Most code is from the previous (writing) example, so what is new here?</p>
-<pre><code class="lang-haxe"><span class="hljs-comment">// read the file</span>
-<span class="hljs-keyword">var</span> content = File.getContent(filePath);
-<span class="hljs-keyword">trace</span> (content);
-</code></pre>
-<p>Just that simple to read a file.</p>
+<p>This way trace will work via the default Log methode.</p>
+<p>Read more about this subject: <a href="https://haxe.org/manual/debugging-trace-log.html" target="_blank">https://haxe.org/manual/debugging-trace-log.html</a></p>
 <h2 id="the-haxe-build-file-buildhxml"><a name="the-haxe-build-file-buildhxml" class="plugin-anchor" href="#the-haxe-build-file-buildhxml"><i class="fa fa-link" aria-hidden="true"></i></a>The Haxe build file, build.hxml</h2>
 <p>You will need a build file (read more about that in the <a href="../09build/example.md">build example</a>).
 I work on osx, so you might need to tweak this script for your os</p>
@@ -597,12 +616,12 @@ Main
 
             
                 
-                <a href="../01writing/example.html" class="navigation navigation-prev " aria-label="Previous page: Example Writing">
+                <a href="../00setup/example.html" class="navigation navigation-prev " aria-label="Previous page: Setup Unity and Haxe">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../20build/about.md" class="navigation navigation-next " aria-label="Next page: Example hxml">
+                <a href="../00helloworld/about.html" class="navigation navigation-next " aria-label="Next page: Example Hello World">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -613,7 +632,7 @@ Main
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Example Reading","level":"1.8","depth":1,"next":{"title":"Example hxml","level":"1.9","depth":1,"path":"20build/about.md","ref":"20build/about.md","articles":[{"title":"How to","level":"1.9.1","depth":2,"path":"20build/example.md","ref":"20build/example.md","articles":[]}]},"previous":{"title":"Example Writing","level":"1.7","depth":1,"path":"01writing/example.md","ref":"01writing/example.md","articles":[]},"dir":"ltr"},"config":{"gitbook":">=2.0.0","theme":"default","variables":{},"plugins":["edit-link","disqus","ga","anchors"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"haxe-and-unity"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-67866831-6"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/MatthijsKamstra/haxeandunity/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"intro.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02reading/example.md","mtime":"2019-06-04T10:10:08.181Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-04T10:13:41.338Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Example setup trace","level":"1.5","depth":1,"next":{"title":"Example Hello World","level":"1.6","depth":1,"path":"00helloworld/about.md","ref":"00helloworld/about.md","articles":[{"title":"How to","level":"1.6.1","depth":2,"path":"00helloworld/example.md","ref":"00helloworld/example.md","articles":[]}]},"previous":{"title":"Setup Unity and Haxe","level":"1.4","depth":1,"path":"00setup/example.md","ref":"00setup/example.md","articles":[]},"dir":"ltr"},"config":{"gitbook":">=2.0.0","theme":"default","variables":{},"plugins":["edit-link","disqus","ga","anchors"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"haxe-and-unity"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-67866831-6"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/MatthijsKamstra/haxeandunity/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"intro.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"00trace/example.md","mtime":"2019-06-04T09:55:26.189Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-04T10:13:41.338Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

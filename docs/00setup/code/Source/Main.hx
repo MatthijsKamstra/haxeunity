@@ -1,12 +1,10 @@
-package;
-
 import unityengine.*;
 
 @:nativeGen
 class Main extends MonoBehaviour {
+	var who:String;
 
 	function Awake() {
-		// logging via unity
-		Debug.Log('[Unity] Hello world');
+		Debug.Log('Hello, $who!');
 	}
 }
