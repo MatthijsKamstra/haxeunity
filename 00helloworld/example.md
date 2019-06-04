@@ -1,9 +1,9 @@
 # Hello World Example
 
 Check the [code folder](https://github.com/MatthijsKamstra/haxeunity/tree/master/00helloworld/code) for more comments.
-If you want to know why we are making this? Check out the [C# helloworld](../00helloworld/about.md).
+If you want to know why we are making this? Check out the [about](about.md).
 
-This example will be a bit diferent from most examples I wrote.
+This example will be a bit different from most examples I wrote.
 
 First the file/folder structure will be different, this because C# in combination with Unity dictates it.
 Normally I would advise to use this folder structure:
@@ -17,12 +17,10 @@ Normally I would advise to use this folder structure:
 ```
 
 For this example I used the "unity-haxe-helloworld" Nadako made: <https://github.com/nadako/unity-haxe-helloworld>.
-But I don't want all these files in my documentation, so for this example I use the same folder structure but won't use the unity files (you should use the files Nadako profided)
+But I don't want all these files in my documentation, so for this example I use the same folder structure but won't use the unity files (you should use the files Nadako provided)
 
 ```
 + unity-haxe-helloworld
-	+ Assets
-		+ Code
 	+ Source
 		- Main.hx
 	- build.hxml
@@ -68,57 +66,22 @@ This stops the generate `#line` directives that map C# expression positions to o
 
 ## The Main.hx
 
-Open your favorite editor, copy/paste the code and save it in the `src` folder.
+Open your favorite editor, copy/paste the code and save it in the `Source` folder.
 
 ```haxe
 package;
 
 import unityengine.*;
 
-import cs.system.Console;
-
 @:nativeGen
 class Main extends MonoBehaviour {
-	function Awake() {
-		// logging via Haxe
-		trace("[Haxe] Hello world before trace rewrite"); // not visible in Unity
-		// write your own trace function suitable for Unity
-		haxe.Log.trace = function(v:Dynamic, ?infos:haxe.PosInfos) {
-			var str = infos.fileName + ":" + infos.lineNumber + ": " + v;
-			Debug.Log(str);
-		}
 
+	function Awake() {
 		// logging via unity
 		Debug.Log('[Unity] Hello world');
-		// logging via C#
-		Console.WriteLine("[C#] Hello world");
-		// logging via Haxe
-		trace("[Haxe] Hello world");
 	}
 }
 
 ```
 
-You can see that we use 3 ways of logging in this file
-
-```haxe
-	Debug.Log('[Unity] Hello world');
-	Console.WriteLine("[C#] Hello world");
-	trace("[Haxe] Hello world");
-```
-
-Only the first one will show up in Unity (`Debug.Log("")`), the others will not.
-
-But if you want to use the default trace (and the ability to link it back to your original Haxe code & easy removal) in Unity you will need to rewrite the logging a bit:
-
-```haxe
-	haxe.Log.trace = function(v:Dynamic, ?infos:haxe.PosInfos) {
-		var str = infos.fileName + ":" + infos.lineNumber + ": " + v;
-		Debug.Log(str);
-	}
-```
-
-This way trace will work via the default Log methode.
-
-Read more about this subject: <https://haxe.org/manual/debugging-trace-log.html>
 
