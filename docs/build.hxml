@@ -16,49 +16,29 @@ build.hxml
 -cmd echo "│ ├── 00helloworld/code"
 
 # write file (native C#)
--cmd cd ../../../../
--cmd cd 01writing_cs/code/
+-cmd cd ../../
+-cmd cd 01writing/code/
 --next
 build.hxml
--cmd echo "│ ├── 01writing_cs/code"
+-cmd echo "│ ├── 01writing/code"
 
 # write file
--cmd cd ../../../../
--cmd cd 01writing_cs/code/
+-cmd cd ../../
+-cmd cd 02reading/code/
 --next
 build.hxml
--cmd echo "│ ├── 01writing_cs/code"
+-cmd echo "│ ├── 02reading/code"
 
-# write file
--cmd cd ../../../../
--cmd cd 01writing_haxe/code/
---next
-build.hxml
--cmd echo "│ ├── 01writing_haxe/code"
-
-# reading file
--cmd cd ../../../../
--cmd cd 02reading_haxe/code/
---next
-build.hxml
--cmd echo "│ ├── 02reading_haxe/code"
 
 # local json database
--cmd cd ../../../../
+-cmd cd ../../
 -cmd cd 04haxelow/code/
 --next
 build.hxml
 -cmd echo "│ ├── 04haxelow/code"
 
-# api call
--cmd cd ../../../../
--cmd cd 06quote_haxe/code/
---next
-build.hxml
--cmd echo "│ ├── 06quote_haxe/code"
-
 # use json
--cmd cd ../../../../
+-cmd cd ../../
 -cmd cd 08json/code/
 --next
 build.hxml

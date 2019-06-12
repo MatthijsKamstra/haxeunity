@@ -13,6 +13,9 @@ class Main extends MonoBehaviour {
 
 	function new (){
 		super();
+	}
+
+	function Awake() {
 		// write your own trace function suitable for Unity
 		haxe.Log.trace = function(v:Dynamic, ?infos:haxe.PosInfos) {
 			var str = '<color=#ff3333>${infos.fileName}:${infos.lineNumber}:</color> <b>${v}</b>';
@@ -20,7 +23,7 @@ class Main extends MonoBehaviour {
 		}
 	}
 
-	function Awake() {
+	function Start() {
 		trace("Haxelow Example");
 
 		var fileName:String = "db.json";
