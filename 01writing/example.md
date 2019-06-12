@@ -22,7 +22,7 @@ That is a lot of code so I will focus on the specific part that writes the file.
 
 
 ```haxe
-	function Awake() {
+	function Start() {
 		trace('Writing example');
 
 		var dataFileName:String = "hello.txt";

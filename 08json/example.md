@@ -28,7 +28,7 @@ That is a lot of code so I will focus on the specific part that writes the file.
 
 
 ```haxe
-	function Awake() {
+	function Start() {
 		trace('Json example');
 
 		var fileName:String = "users.json";

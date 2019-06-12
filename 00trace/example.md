@@ -34,6 +34,9 @@ class Main extends MonoBehaviour {
 
 	function new (){
 		super();
+	}
+
+	function Awake() {
 		// write your own trace function suitable for Unity
 		haxe.Log.trace = function(v:Dynamic, ?infos:haxe.PosInfos) {
 			var str = infos.fileName + ":" + infos.lineNumber + ": " + v;
@@ -41,7 +44,7 @@ class Main extends MonoBehaviour {
 		}
 	}
 
-	function Awake() {
+	function Start() {
 		// logging via unity
 		Debug.Log('[Unity] Hello world');
 		// logging via C#
@@ -54,6 +57,7 @@ class Main extends MonoBehaviour {
 		var main = new Main();
 	}
 }
+
 ```
 
 

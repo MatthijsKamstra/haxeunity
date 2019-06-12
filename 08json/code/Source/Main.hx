@@ -13,6 +13,9 @@ class Main extends MonoBehaviour {
 
 	function new (){
 		super();
+	}
+
+	function Awake() {
 		// write your own trace function suitable for Unity
 		haxe.Log.trace = function(v:Dynamic, ?infos:haxe.PosInfos) {
 			var str = infos.fileName + ":" + infos.lineNumber + ": " + v;
@@ -20,7 +23,7 @@ class Main extends MonoBehaviour {
 		}
 	}
 
-	function Awake() {
+	function Start() {
 		trace('Json example');
 
 		var fileName:String = "users.json";
