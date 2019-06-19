@@ -8,34 +8,63 @@ build.hxml
 -cmd echo "│ ├── haxe/code"
 
 
-# hello world
+# 00setup
 -cmd cd ../../
--cmd cd 00helloworld/code/
+-cmd cd 00setup/code/
 --next
 build.hxml
--cmd echo "│ ├── 00helloworld/code"
+-cmd echo "│ ├── 00setup/code"
 
-# write file (native C#)
+# 01helloworld
 -cmd cd ../../
--cmd cd 01writing/code/
+-cmd cd 01helloworld/code/
 --next
 build.hxml
--cmd echo "│ ├── 01writing/code"
+-cmd echo "│ ├── 01helloworld/code"
 
-# write file
+# 02trace
 -cmd cd ../../
--cmd cd 02reading/code/
+-cmd cd 02trace/code/
 --next
 build.hxml
--cmd echo "│ ├── 02reading/code"
+-cmd echo "│ ├── 02trace/code"
+
+# 02trace2
+-cmd cd ../../
+-cmd cd 02trace2/code/
+--next
+build.hxml
+-cmd echo "│ ├── 02trace2/code"
+
+# 03writing
+-cmd cd ../../
+-cmd cd 03writing/code/
+--next
+build.hxml
+-cmd echo "│ ├── 03writing/code"
+
+# 04reading
+-cmd cd ../../
+-cmd cd 04reading/code/
+--next
+build.hxml
+-cmd echo "│ ├── 04reading/code"
 
 
 # local json database
 -cmd cd ../../
--cmd cd 04haxelow/code/
+-cmd cd 05haxelow/code/
 --next
 build.hxml
--cmd echo "│ ├── 04haxelow/code"
+-cmd echo "│ ├── 05haxelow/code"
+
+# 06keep
+-cmd cd ../../
+-cmd cd 06keep/code/
+--next
+build.hxml
+-cmd echo "│ ├── 06keep/code"
+
 
 # use json
 -cmd cd ../../
