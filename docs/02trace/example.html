@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Code editor · GitBook</title>
+        <title>Setup trace · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="hello-world.html" />
+    <link rel="next" href="../02trace2/example.html" />
     
     
-    <link rel="prev" href="installation.html" />
+    <link rel="prev" href="../01helloworld/example.html" />
     
 
     </head>
@@ -110,9 +110,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="about.html">
+        <li class="chapter " data-level="1.2" data-path="../haxe/about.html">
             
-                <a href="about.html">
+                <a href="../haxe/about.html">
             
                     
                     Haxe basics
@@ -124,9 +124,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="quick-install.html">
+        <li class="chapter " data-level="1.2.1" data-path="../haxe/quick-install.html">
             
-                <a href="quick-install.html">
+                <a href="../haxe/quick-install.html">
             
                     
                     Quick install
@@ -137,9 +137,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="installation.html">
+        <li class="chapter " data-level="1.2.2" data-path="../haxe/installation.html">
             
-                <a href="installation.html">
+                <a href="../haxe/installation.html">
             
                     
                     Installation
@@ -150,9 +150,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.3" data-path="choosing-a-code-editor.html">
+        <li class="chapter " data-level="1.2.3" data-path="../haxe/choosing-a-code-editor.html">
             
-                <a href="choosing-a-code-editor.html">
+                <a href="../haxe/choosing-a-code-editor.html">
             
                     
                     Code editor
@@ -163,9 +163,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="hello-world.html">
+        <li class="chapter " data-level="1.2.4" data-path="../haxe/hello-world.html">
             
-                <a href="hello-world.html">
+                <a href="../haxe/hello-world.html">
             
                     
                     Hello world
@@ -176,9 +176,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="learn-haxe.html">
+        <li class="chapter " data-level="1.2.5" data-path="../haxe/learn-haxe.html">
             
-                <a href="learn-haxe.html">
+                <a href="../haxe/learn-haxe.html">
             
                     
                     Learn Haxe
@@ -284,9 +284,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="../02trace/example.html">
+        <li class="chapter active" data-level="1.6" data-path="example.html">
             
-                <a href="../02trace/example.html">
+                <a href="example.html">
             
                     
                     Setup trace
@@ -585,7 +585,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Code editor</a>
+        <a href=".." >Setup trace</a>
     </h1>
 </div>
 
@@ -600,66 +600,88 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="choosing-a-code-editor"><a name="choosing-a-code-editor" class="plugin-anchor" href="#choosing-a-code-editor"><i class="fa fa-link" aria-hidden="true"></i></a>Choosing a Code Editor</h1>
-<p>Once Haxe has been <a href="installation.html">installed</a> (yes you should do that first!). It is helpful to choose an integrated development environment (IDE), with good support for Haxe development.</p>
-<p>Although you can write code using even a simple text editor.
-A quality IDE can provide:</p>
-<ul>
-<li>code completion (code hints)</li>
-<li>shortcuts to build and test your projects</li>
-<li>and other tools to give you a great coding experience.</li>
-</ul>
-<h2 id="visual-studio-code"><a name="visual-studio-code" class="plugin-anchor" href="#visual-studio-code"><i class="fa fa-link" aria-hidden="true"></i></a>Visual Studio Code</h2>
-<p>Code is the recommended editor to get started with Haxe, and is the current main effort from the Haxe Foundation.</p>
-<p><img src="https://haxe.org/img/ide/vscode.gif" alt="Visual Studio Code"></p>
-<p><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> Build and debug modern web and cloud applications.</p>
-<p>Code is free and open-source, and cross platform - Linux, Mac OSX, and Windows.</p>
-<h2 id="haxedevelop"><a name="haxedevelop" class="plugin-anchor" href="#haxedevelop"><i class="fa fa-link" aria-hidden="true"></i></a>HaxeDevelop</h2>
-<p><img src="http://haxedevelop.org/img/haxedevelop-interface.jpg" alt=""></p>
-<p><a href="http://www.haxedevelop.org" target="_blank">HaxeDevelop</a> is one of the strongest IDEs for large scale Haxe development.
-If you are a Windows user (and perhaps if you are not), we recommend that you try HaxeDevelop first.</p>
-<p>HaxeDevelop is free and open-source.</p>
-<h2 id="intellij-idea"><a name="intellij-idea" class="plugin-anchor" href="#intellij-idea"><i class="fa fa-link" aria-hidden="true"></i></a>IntelliJ IDEA</h2>
-<p><img src="https://www.jetbrains.com/idea/img/screenshots/idea_overview_5_1.png" alt=""></p>
-<p><a href="https://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a> is primarily marketed as a Java IDE. But it has a growing support within the Haxe community, and is prefered by large teams. The full edition and the free community edition, support the open-source <a href="https://plugins.jetbrains.com/plugin/6873?pr=idea" target="_blank">Haxe plugin</a>.</p>
-<h2 id="other-choices"><a name="other-choices" class="plugin-anchor" href="#other-choices"><i class="fa fa-link" aria-hidden="true"></i></a>Other Choices</h2>
-<p>There are other code editors to choose from, include vim and up-and-coming Haxe-based editors. You can read more at <a href="http://haxe.org/documentation/introduction/editors-and-ides.html" target="_blank">http://haxe.org/documentation/introduction/editors-and-ides.html</a></p>
-<h2 id="summary"><a name="summary" class="plugin-anchor" href="#summary"><i class="fa fa-link" aria-hidden="true"></i></a>Summary</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Platform</th>
-<th>Price</th>
-<th>License</th>
-<th>Plugin</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>VSCode</td>
-<td>Windows, Mac, Linux</td>
-<td>Free</td>
-<td>?</td>
-<td><a href="https://marketplace.visualstudio.com/items?itemName=vshaxe.haxe-extension-pack" target="_blank">Haxe Extension Pack </a></td>
-</tr>
-<tr>
-<td>HaxeDevelop</td>
-<td>Windows</td>
-<td>Free</td>
-<td>Open Source</td>
-<td></td>
-</tr>
-<tr>
-<td>IntelliJ IDEA</td>
-<td>Windows, Mac, Linux</td>
-<td>Free</td>
-<td>Apache License 2.0</td>
-<td><a href="http://plugins.jetbrains.com/plugin/6873?pr=idea" target="_blank">Haxe Support</a></td>
-</tr>
-</tbody>
-</table>
-<p><em>Some of this information is directly from <a href="http://www.openfl.org/learn/resources/choosing-a-code-editor/" target="_blank">Openfl documentation</a></em></p>
+                                <h1 id="trace-example"><a name="trace-example" class="plugin-anchor" href="#trace-example"><i class="fa fa-link" aria-hidden="true"></i></a>trace example</h1>
+<p>Loggin is somewhat different in Unity.
+Normally you would use <code>trace</code> for logging in Haxe.
+But the unity target uses a different Logging system, so the normal trace doesn&apos;t show up in Unity.</p>
+<p>The example is going to fix that.</p>
+<p>The short version of the folder structure will not work without the files Unity needs.
+If you want to know more about that, read the <a href="../00setup/example.html">setup</a></p>
+<pre><code>+ unity-haxe-helloworld
+    + Source
+        - Main.hx
+    - build.hxml
+</code></pre><h2 id="the-mainhx"><a name="the-mainhx" class="plugin-anchor" href="#the-mainhx"><i class="fa fa-link" aria-hidden="true"></i></a>The Main.hx</h2>
+<p>Check out the whole <a href="../code/Source/Main.hx"><code>Main.hx</code></a> for more details.</p>
+<pre><code>package;
+
+import unityengine.*;
+
+import cs.system.Console;
+
+@:nativeGen
+class Main extends MonoBehaviour {
+
+    function new (){
+        super();
+    }
+
+    function Awake() {
+        // write your own trace function suitable for Unity
+        haxe.Log.trace = function(v:Dynamic, ?infos:haxe.PosInfos) {
+            var str = infos.fileName + &quot;:&quot; + infos.lineNumber + &quot;: &quot; + v;
+            Debug.Log(str);
+        }
+    }
+
+    function Start() {
+        // logging via unity
+        Debug.Log(&apos;[Unity] Hello world&apos;);
+        // logging via C#
+        Console.WriteLine(&quot;[C#] Hello world&quot;);
+        // logging via Haxe
+        trace(&quot;[Haxe] Hello world&quot;);
+    }
+
+    static public function main() {
+        var main = new Main();
+    }
+}
+</code></pre><p>You can see that we use 3 ways of logging in this file</p>
+<pre><code class="lang-haxe">    Debug.Log(<span class="hljs-string">&apos;[Unity] Hello world&apos;</span>);
+    Console.WriteLine(<span class="hljs-string">&quot;[C#] Hello world&quot;</span>);
+    <span class="hljs-keyword">trace</span>(<span class="hljs-string">&quot;[Haxe] Hello world&quot;</span>);
+</code></pre>
+<p>Only the first one will show up in Unity (<code>Debug.Log(&quot;&quot;)</code>), the others will not.</p>
+<p>But if you want to use the default trace (and the ability to link it back to your original Haxe code &amp; easy removal) in Unity you will need to rewrite the logging a bit:</p>
+<pre><code class="lang-haxe">    haxe.Log.<span class="hljs-keyword">trace</span> = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(v:Dynamic, ?infos:haxe.PosInfos)</span> </span>{
+        <span class="hljs-keyword">var</span> str = infos.fileName + <span class="hljs-string">&quot;:&quot;</span> + infos.lineNumber + <span class="hljs-string">&quot;: &quot;</span> + v;
+        Debug.Log(str);
+    }
+</code></pre>
+<p>This way trace will work via the default Log methode.</p>
+<p>Read more about this subject: <a href="https://haxe.org/manual/debugging-trace-log.html" target="_blank">https://haxe.org/manual/debugging-trace-log.html</a></p>
+<h2 id="the-haxe-build-file-buildhxml"><a name="the-haxe-build-file-buildhxml" class="plugin-anchor" href="#the-haxe-build-file-buildhxml"><i class="fa fa-link" aria-hidden="true"></i></a>The Haxe build file, build.hxml</h2>
+<p>You will need a build file (read more about that in the <a href="../09build/example.md">build example</a>).
+I work on osx, so you might need to tweak this script for your os</p>
+<pre><code class="lang-bash">-cp Source
+-D net-ver=40
+<span class="hljs-comment"># -net-lib C:\Program Files (x86)\Unity\Editor\Data\Managed\UnityEngine.dll</span>
+<span class="hljs-comment"># -net-lib /Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll</span>
+-net-lib /Applications/Unity/Hub/Editor/2018.3.12f1/Unity.app/Contents/Managed/UnityEngine.dll
+-cs Assets/Code
+-D no-compilation
+-D real-position
+Main
+</code></pre>
+<h2 id="build-the-code"><a name="build-the-code" class="plugin-anchor" href="#build-the-code"><i class="fa fa-link" aria-hidden="true"></i></a>Build the code</h2>
+<p>To finish and see what we have, build the file and see the result</p>
+<ol>
+<li>Open your terminal</li>
+<li><code>cd</code> to the correct folder where you have saved the <code>build.hxml</code></li>
+<li>type <code>haxe build.hxml</code></li>
+<li>press enter</li>
+</ol>
 
                                 
                                 </section>
@@ -687,12 +709,12 @@ If you are a Windows user (and perhaps if you are not), we recommend that you tr
 
             
                 
-                <a href="installation.html" class="navigation navigation-prev " aria-label="Previous page: Installation">
+                <a href="../01helloworld/example.html" class="navigation navigation-prev " aria-label="Previous page: How to">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="hello-world.html" class="navigation navigation-next " aria-label="Next page: Hello world">
+                <a href="../02trace2/example.html" class="navigation navigation-next " aria-label="Next page: Setup trace color">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -703,7 +725,7 @@ If you are a Windows user (and perhaps if you are not), we recommend that you tr
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Code editor","level":"1.2.3","depth":2,"next":{"title":"Hello world","level":"1.2.4","depth":2,"path":"haxe/hello-world.md","ref":"haxe/hello-world.md","articles":[]},"previous":{"title":"Installation","level":"1.2.2","depth":2,"path":"haxe/installation.md","ref":"haxe/installation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":">=2.0.0","theme":"default","variables":{},"plugins":["edit-link","disqus","ga","anchors"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"haxe-and-unity"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-67866831-8"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/MatthijsKamstra/haxeandunity/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"intro.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"haxe/choosing-a-code-editor.md","mtime":"2018-02-15T15:19:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-19T14:20:01.927Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Setup trace","level":"1.6","depth":1,"next":{"title":"Setup trace color","level":"1.7","depth":1,"path":"02trace2/example.md","ref":"02trace2/example.md","articles":[]},"previous":{"title":"How to","level":"1.5.1","depth":2,"path":"01helloworld/example.md","ref":"01helloworld/example.md","articles":[]},"dir":"ltr"},"config":{"gitbook":">=2.0.0","theme":"default","variables":{},"plugins":["edit-link","disqus","ga","anchors"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"haxe-and-unity"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-67866831-8"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/MatthijsKamstra/haxeandunity/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"intro.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02trace/example.md","mtime":"2019-06-12T21:51:38.574Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-19T14:20:01.927Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
