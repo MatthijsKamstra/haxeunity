@@ -78,7 +78,7 @@ class HideWhenPlaying extends MonoBehaviour {
 
 Very simular. In my original C# file I didn't use a package (or namespace) but .. he I wanted to improve on my previous project.
 
-In the Main calls we use a direct import (`import view.*` will not work). And because of `@:keep` the DCE will not clean this file.
+In the Main use a direct import (`import view.*` will not work). And because of `@:keep` the DCE will not clean this file.
 
 The generated C# file is not as clean as the original file:
 
