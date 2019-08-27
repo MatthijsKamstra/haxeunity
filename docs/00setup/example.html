@@ -601,22 +601,26 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="setup-unity-and-haxe"><a name="setup-unity-and-haxe" class="plugin-anchor" href="#setup-unity-and-haxe"><i class="fa fa-link" aria-hidden="true"></i></a>Setup Unity and Haxe</h1>
-<p>You can use the example made by <a href="https://github.com/nadako" target="_blank">Dan Korostelev aka Nadako</a>: <a href="https://github.com/nadako/unity-haxe-helloworld" target="_blank">unity-haxe-helloworld</a>.
-But you can also start from scratch and follow this setup.</p>
+<p>You can use the example repo made by <a href="https://github.com/nadako" target="_blank">Dan Korostelev aka Nadako</a>: <a href="https://github.com/nadako/unity-haxe-helloworld" target="_blank">unity-haxe-helloworld</a>. It&apos;s a basic hello world for Unity and Haxe.</p>
+<p>But you can also start from scratch and follow this setup.</p>
 <h2 id="unity"><a name="unity" class="plugin-anchor" href="#unity"><i class="fa fa-link" aria-hidden="true"></i></a>Unity</h2>
 <p>Open Unity and follow &quot;instructions&quot;:</p>
+<ul>
+<li>Give it a project name: (I used) &quot;SetupUnityHaxe&quot;</li>
+<li>Use the Template: 3D</li>
+</ul>
 <p><img src="../img/unity/00unity_setup.png" alt=""></p>
 <p>You will end up with:</p>
 <p><img src="../img/unity/01unity_start.png" alt=""></p>
 <h2 id="folder-structure"><a name="folder-structure" class="plugin-anchor" href="#folder-structure"><i class="fa fa-link" aria-hidden="true"></i></a>Folder structure</h2>
 <p>Default Unity creates the following folders:</p>
 <p><img src="../img/unity/02folders.png" alt=""></p>
-<p>You need to add a <code>Source</code> folder which will hold the Haxe files.</p>
+<p>Add a <code>Source</code> folder which will hold the Haxe files.</p>
 <pre><code>+ SetupUnityHaxe
     + Source
         - Main.hx
 </code></pre><h2 id="the-mainhx"><a name="the-mainhx" class="plugin-anchor" href="#the-mainhx"><i class="fa fa-link" aria-hidden="true"></i></a>The Main.hx</h2>
-<p>Open your favorite editor, copy/paste the code and save it in the <code>Source</code> folder.</p>
+<p>Open your favourite editor, copy/paste the code and save it in the <code>Source</code> folder.</p>
 <pre><code class="lang-haxe"><span class="hljs-keyword">import</span> unityengine.*;
 
 @:nativeGen
@@ -632,8 +636,11 @@ But you can also start from scratch and follow this setup.</p>
 <p>Add the <code>build.hxml</code> in the root</p>
 <pre><code class="lang-bash">-cp Source
 -D net-ver=40
+<span class="hljs-comment"># windows</span>
 <span class="hljs-comment"># -net-lib C:\Program Files (x86)\Unity\Editor\Data\Managed\UnityEngine.dll</span>
+<span class="hljs-comment"># osx</span>
 <span class="hljs-comment"># -net-lib /Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll</span>
+<span class="hljs-comment"># osx with Unity Hub</span>
 -net-lib /Applications/Unity/Hub/Editor/2018.3.12f1/Unity.app/Contents/Managed/UnityEngine.dll
 -cs Assets/Code
 -D no-compilation
@@ -662,7 +669,7 @@ Main
 <p><img src="../img/unity/08unity_script.png" alt=""></p>
 <p>Fill in your name (for example &quot;Foobar&quot;)</p>
 <p><img src="../img/unity/09unity_who.png" alt=""></p>
-<p>Press &quot;Play&quot; (short cut on osx: <code>cmd</code>+<code>p</code>) </p>
+<p>Press &quot;Play&quot; (short cut on osx: <code>cmd</code>+<code>p</code>)</p>
 <p><img src="../img/unity/10unity_console.png" alt=""></p>
 <p>And you will seen in the <strong>Console</strong> panel the log &quot;Hello, Foobar!&quot;</p>
 
@@ -708,7 +715,7 @@ Main
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Setup Unity and Haxe","level":"1.4","depth":1,"next":{"title":"Example Hello World","level":"1.5","depth":1,"path":"01helloworld/about.md","ref":"01helloworld/about.md","articles":[{"title":"How to","level":"1.5.1","depth":2,"path":"01helloworld/example.md","ref":"01helloworld/example.md","articles":[]}]},"previous":{"title":"Resources","level":"1.3.2","depth":2,"path":"haxecs/resource.md","ref":"haxecs/resource.md","articles":[]},"dir":"ltr"},"config":{"gitbook":">=2.0.0","theme":"default","variables":{},"plugins":["edit-link","disqus","ga","anchors"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"haxe-and-unity"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-67866831-8"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/MatthijsKamstra/haxeandunity/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"intro.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"00setup/example.md","mtime":"2019-06-04T09:30:47.717Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-19T14:20:01.927Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Setup Unity and Haxe","level":"1.4","depth":1,"next":{"title":"Example Hello World","level":"1.5","depth":1,"path":"01helloworld/about.md","ref":"01helloworld/about.md","articles":[{"title":"How to","level":"1.5.1","depth":2,"path":"01helloworld/example.md","ref":"01helloworld/example.md","articles":[]}]},"previous":{"title":"Resources","level":"1.3.2","depth":2,"path":"haxecs/resource.md","ref":"haxecs/resource.md","articles":[]},"dir":"ltr"},"config":{"gitbook":">=2.0.0","theme":"default","variables":{},"plugins":["edit-link","disqus","ga","anchors"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"haxe-and-unity"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-67866831-8"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/MatthijsKamstra/haxeandunity/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"intro.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"00setup/example.md","mtime":"2019-08-27T14:33:03.188Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-27T15:25:54.401Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

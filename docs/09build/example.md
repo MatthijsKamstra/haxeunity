@@ -98,3 +98,29 @@ This don't generate `#line` directives that map C# expression positions to origi
 
 
 
+## Find Unity install
+
+I have Unity hub installed on Osx, so that is my main source for this knowledge.
+
+
+Open Unity Hub on Installs
+![](unity_hub.png)
+
+
+Click on the 3 dots, and use "Reveal in Finder"
+
+![](unity_hub_install.png)
+
+Use this knowledge to change the `-net-lib`
+
+```bash
+
+# previous install
+#-net-lib /Applications/Unity/Hub/Editor/2018.3.12f1/Unity.app/Contents/Managed/UnityEngine.dll
+# after upgrading Unity:
+-net-lib /Applications/Unity/Hub/Editor/2019.2.2f1/Unity.app/Contents/Managed/UnityEngine.dll
+```
+
+happy coding!
+
+
