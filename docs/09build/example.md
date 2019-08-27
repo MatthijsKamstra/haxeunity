@@ -54,7 +54,7 @@ In my case the location was different:
 
 ```bash
 # Osx (Unity installed via 'Unity Hub")
--net-lib /Applications/Unity/Hub/Editor/2018.3.12f1/Unity.app/Contents/Managed/UnityEngine.dll
+-net-lib /Applications/Unity/Hub/Editor/2019.2.2f1/Unity.app/Contents/Managed/UnityEngine.dll
 ```
 
 
@@ -116,7 +116,7 @@ Use this knowledge to change the `-net-lib`
 ```bash
 
 # previous install
-#-net-lib /Applications/Unity/Hub/Editor/2018.3.12f1/Unity.app/Contents/Managed/UnityEngine.dll
+#-net-lib /Applications/Unity/Hub/Editor/2018.2.2f1/Unity.app/Contents/Managed/UnityEngine.dll
 # after upgrading Unity:
 -net-lib /Applications/Unity/Hub/Editor/2019.2.2f1/Unity.app/Contents/Managed/UnityEngine.dll
 ```

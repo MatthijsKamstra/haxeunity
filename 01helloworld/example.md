@@ -35,7 +35,7 @@ I will be using the "unity-haxe-helloworld" from Nadako in all examples. But thi
 -D net-ver=40
 # -net-lib C:\Program Files (x86)\Unity\Editor\Data\Managed\UnityEngine.dll
 # -net-lib /Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll
--net-lib /Applications/Unity/Hub/Editor/2018.3.12f1/Unity.app/Contents/Managed/UnityEngine.dll
+-net-lib /Applications/Unity/Hub/Editor/2019.2.2f1/Unity.app/Contents/Managed/UnityEngine.dll
 -cs Assets/Code
 -D no-compilation
 -D real-position
@@ -52,7 +52,7 @@ If you work on Osx you should have a path the unity engine:
 
 I work on osx and I used "Unity Hub" to install Unity my path was:
 
-`-net-lib /Applications/Unity/Hub/Editor/2018.3.12f1/Unity.app/Contents/Managed/UnityEngine.dll`
+`-net-lib /Applications/Unity/Hub/Editor/2019.2.2f1/Unity.app/Contents/Managed/UnityEngine.dll`
 
 The only thing I added to the build.hxml is
 

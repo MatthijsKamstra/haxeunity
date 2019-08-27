@@ -601,9 +601,9 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="keep"><a name="keep" class="plugin-anchor" href="#keep"><i class="fa fa-link" aria-hidden="true"></i></a>Keep</h1>
-<p>Keep files, stop DCE (if you need a little bit more indepth info, read the <a href="about.html">about</a>)</p>
+<p>Keep files, stop DCE (if you need a little bit more in-depth info, read the <a href="about.html">about</a>)</p>
 <p>Check the <a href="https://github.com/MatthijsKamstra/haxeunity/tree/master/06keep/code" target="_blank">code folder</a> for more comments.</p>
-<p>The &quot;normal&quot; filestructure I use for examples will not work.
+<p>The &quot;normal&quot; file-structure I use for examples will not work.
 We will follow the Unity/C# folder structure you see here:</p>
 <pre><code>+ unity-haxe-helloworld
     + Assets
@@ -690,7 +690,7 @@ namespace view {
 -D net-ver=40
 <span class="hljs-comment"># -net-lib C:\Program Files (x86)\Unity\Editor\Data\Managed\UnityEngine.dll</span>
 <span class="hljs-comment"># -net-lib /Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll</span>
--net-lib /Applications/Unity/Hub/Editor/2018.3.12f1/Unity.app/Contents/Managed/UnityEngine.dll
+-net-lib /Applications/Unity/Hub/Editor/2019.2.2f1/Unity.app/Contents/Managed/UnityEngine.dll
 -cs Assets/Code
 -D no-compilation
 -D real-position
@@ -701,25 +701,10 @@ Main
 <p>If you work on Osx you should have a path the unity engine:</p>
 <p><code>-net-lib /Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll</code></p>
 <p>I work on osx and I used &quot;Unity Hub&quot; to install Unity my path was:</p>
-<p><code>-net-lib /Applications/Unity/Hub/Editor/2018.3.12f1/Unity.app/Contents/Managed/UnityEngine.dll</code></p>
+<p><code>-net-lib /Applications/Unity/Hub/Editor/2019.2.2f1/Unity.app/Contents/Managed/UnityEngine.dll</code></p>
 <p>The only thing I added to the build.hxml is</p>
 <pre><code>-D real-position
 </code></pre><p>This stops the generate <code>#line</code> directives that map C# expression positions to original .hx files. Useful for tracking down issues related to code generation. But I hope I will never need this. So lets not generate this lines.</p>
-<h2 id="the-mainhx"><a name="the-mainhx" class="plugin-anchor" href="#the-mainhx"><i class="fa fa-link" aria-hidden="true"></i></a>The Main.hx</h2>
-<p>Open your favorite editor, copy/paste the code and save it in the <code>Source</code> folder.</p>
-<pre><code class="lang-haxe"><span class="hljs-keyword">package</span>;
-
-<span class="hljs-keyword">import</span> unityengine.*;
-
-@:nativeGen
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">MonoBehaviour</span> </span>{
-
-    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Awake</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-comment">// logging via unity</span>
-        Debug.Log(<span class="hljs-string">&apos;[Unity] Hello world&apos;</span>);
-    }
-}
-</code></pre>
 
                                 
                                 </section>
@@ -763,7 +748,7 @@ Main
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"How to","level":"1.11.1","depth":2,"next":{"title":"Example Json","level":"1.12","depth":1,"path":"08json/about.md","ref":"08json/about.md","articles":[{"title":"How to","level":"1.12.1","depth":2,"path":"08json/example.md","ref":"08json/example.md","articles":[]}]},"previous":{"title":"Example keep","level":"1.11","depth":1,"path":"06keep/about.md","ref":"06keep/about.md","articles":[{"title":"How to","level":"1.11.1","depth":2,"path":"06keep/example.md","ref":"06keep/example.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":">=2.0.0","theme":"default","variables":{},"plugins":["edit-link","disqus","ga","anchors"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"haxe-and-unity"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-67866831-8"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/MatthijsKamstra/haxeandunity/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"intro.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"06keep/example.md","mtime":"2019-08-27T15:29:20.575Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-27T15:30:01.916Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"How to","level":"1.11.1","depth":2,"next":{"title":"Example Json","level":"1.12","depth":1,"path":"08json/about.md","ref":"08json/about.md","articles":[{"title":"How to","level":"1.12.1","depth":2,"path":"08json/example.md","ref":"08json/example.md","articles":[]}]},"previous":{"title":"Example keep","level":"1.11","depth":1,"path":"06keep/about.md","ref":"06keep/about.md","articles":[{"title":"How to","level":"1.11.1","depth":2,"path":"06keep/example.md","ref":"06keep/example.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":">=2.0.0","theme":"default","variables":{},"plugins":["edit-link","disqus","ga","anchors"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"haxe-and-unity"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-67866831-8"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"","base":"https://github.com/MatthijsKamstra/haxeandunity/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"structure":{"langs":"LANGS.md","readme":"intro.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"06keep/example.md","mtime":"2019-08-27T19:19:38.789Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-27T19:21:12.870Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

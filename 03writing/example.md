@@ -80,7 +80,7 @@ I work on osx, so you might need to tweak this script for your os
 -D net-ver=40
 # -net-lib C:\Program Files (x86)\Unity\Editor\Data\Managed\UnityEngine.dll
 # -net-lib /Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll
--net-lib /Applications/Unity/Hub/Editor/2018.3.12f1/Unity.app/Contents/Managed/UnityEngine.dll
+-net-lib /Applications/Unity/Hub/Editor/2019.2.2f1/Unity.app/Contents/Managed/UnityEngine.dll
 -cs Assets/Code
 -D no-compilation
 -D real-position

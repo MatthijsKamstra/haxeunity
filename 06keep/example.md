@@ -1,10 +1,10 @@
 # Keep
 
-Keep files, stop DCE (if you need a little bit more indepth info, read the [about](about.md))
+Keep files, stop DCE (if you need a little bit more in-depth info, read the [about](about.md))
 
 Check the [code folder](https://github.com/MatthijsKamstra/haxeunity/tree/master/06keep/code) for more comments.
 
-The "normal" filestructure I use for examples will not work.
+The "normal" file-structure I use for examples will not work.
 We will follow the Unity/C# folder structure you see here:
 
 ```
@@ -138,7 +138,7 @@ I will be using the "unity-haxe-helloworld" from Nadako in all examples. But thi
 -D net-ver=40
 # -net-lib C:\Program Files (x86)\Unity\Editor\Data\Managed\UnityEngine.dll
 # -net-lib /Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll
--net-lib /Applications/Unity/Hub/Editor/2018.3.12f1/Unity.app/Contents/Managed/UnityEngine.dll
+-net-lib /Applications/Unity/Hub/Editor/2019.2.2f1/Unity.app/Contents/Managed/UnityEngine.dll
 -cs Assets/Code
 -D no-compilation
 -D real-position
@@ -155,7 +155,7 @@ If you work on Osx you should have a path the unity engine:
 
 I work on osx and I used "Unity Hub" to install Unity my path was:
 
-`-net-lib /Applications/Unity/Hub/Editor/2018.3.12f1/Unity.app/Contents/Managed/UnityEngine.dll`
+`-net-lib /Applications/Unity/Hub/Editor/2019.2.2f1/Unity.app/Contents/Managed/UnityEngine.dll`
 
 The only thing I added to the build.hxml is
 
@@ -166,25 +166,5 @@ The only thing I added to the build.hxml is
 This stops the generate `#line` directives that map C# expression positions to original .hx files. Useful for tracking down issues related to code generation. But I hope I will never need this. So lets not generate this lines.
 
 
-
-## The Main.hx
-
-Open your favorite editor, copy/paste the code and save it in the `Source` folder.
-
-```haxe
-package;
-
-import unityengine.*;
-
-@:nativeGen
-class Main extends MonoBehaviour {
-
-	function Awake() {
-		// logging via unity
-		Debug.Log('[Unity] Hello world');
-	}
-}
-
-```
 
 
