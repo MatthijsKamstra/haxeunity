@@ -1,12 +1,11 @@
 # Keep
 
-Keep files, stop DCE
+Keep files, stop DCE (if you need a little bit more indepth info, read the [about](about.md))
 
 Check the [code folder](https://github.com/MatthijsKamstra/haxeunity/tree/master/06keep/code) for more comments.
 
-
-The short version of the folder structure will not work without the files Unity needs.
-If you want to know more about that, read the [setup](../00setup/example.md)
+The "normal" filestructure I use for examples will not work.
+We will follow the Unity/C# folder structure you see here:
 
 ```
 + unity-haxe-helloworld
@@ -17,6 +16,10 @@ If you want to know more about that, read the [setup](../00setup/example.md)
 		- Main.hx
 	- build.hxml
 ```
+
+This folder structure will not work with Unity because it has no Unity files!
+Primarily because this is not a Unity tutorial.
+But I understand that is difficult to test so if you want to know more how you can setup Unity and Haxe from scratch, read the [setup](../00setup/example.md) example.
 
 
 
@@ -43,9 +46,16 @@ class Main extends MonoBehaviour {
 ```
 
 
-As you might have noticed we import `view.HideWhePlaying`.
+As you might have noticed we import `view.HideWhenPlaying`.
+This is because we need the Haxe compiler to notice this specific class!
 
-So lets make that Class
+In the Main use a direct import (a wildcard will not work: `import view.*` ).
+
+
+
+## the Class / Script
+
+So lets make that Class!
 
 First I will show the original file I created in C#
 
@@ -59,6 +69,8 @@ public class HideWhenPlaying : MonoBehaviour
     }
 }
 ```
+
+Let's recreate that one in Haxe:
 
 
 ```haxe
@@ -76,9 +88,13 @@ class HideWhenPlaying extends MonoBehaviour {
 ```
 
 
-Very simular. In my original C# file I didn't use a package (or namespace) but .. he I wanted to improve on my previous project.
+Very similar. In my original C# file I didn't use a package (or namespace for C# users) but .. he I wanted to improve on my previous project.
 
-In the Main use a direct import (`import view.*` will not work). And because of `@:keep` the DCE will not clean this file.
+
+We will not be using this class in the Main.hx. But because we imported the class and in combination with `@:keep` the Haxe compiler knows that it need to transpile the Haxe code to C#.
+
+## Generated file
+
 
 The generated C# file is not as clean as the original file:
 
@@ -99,6 +115,17 @@ namespace view {
 ```
 
 But still very readable for C# developers
+
+## Unity
+
+So when you build the code via the build file.
+
+You will end up with:
+
+![](unity_generated.png)
+
+And you can attach that to an gameobject to make it disappear when you press "Play"
+
 
 
 

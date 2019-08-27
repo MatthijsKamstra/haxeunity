@@ -1,12 +1,17 @@
 # Setup Unity and Haxe
 
-You can use the example made by [Dan Korostelev aka Nadako](https://github.com/nadako): [unity-haxe-helloworld](https://github.com/nadako/unity-haxe-helloworld).
+You can use the example repo made by [Dan Korostelev aka Nadako](https://github.com/nadako): [unity-haxe-helloworld](https://github.com/nadako/unity-haxe-helloworld). It's a basic hello world for Unity and Haxe.
+
 But you can also start from scratch and follow this setup.
+
 
 
 ## Unity
 
 Open Unity and follow "instructions":
+
+- Give it a project name: (I used) "SetupUnityHaxe"
+- Use the Template: 3D
 
 ![](../img/unity/00unity_setup.png)
 
@@ -20,7 +25,7 @@ Default Unity creates the following folders:
 
 ![](../img/unity/02folders.png)
 
-You need to add a `Source` folder which will hold the Haxe files.
+Add a `Source` folder which will hold the Haxe files.
 
 ```
 + SetupUnityHaxe
@@ -31,7 +36,7 @@ You need to add a `Source` folder which will hold the Haxe files.
 
 ## The Main.hx
 
-Open your favorite editor, copy/paste the code and save it in the `Source` folder.
+Open your favourite editor, copy/paste the code and save it in the `Source` folder.
 
 ```haxe
 import unityengine.*;
@@ -55,8 +60,11 @@ Add the `build.hxml` in the root
 ```bash
 -cp Source
 -D net-ver=40
+# windows
 # -net-lib C:\Program Files (x86)\Unity\Editor\Data\Managed\UnityEngine.dll
+# osx
 # -net-lib /Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll
+# osx with Unity Hub
 -net-lib /Applications/Unity/Hub/Editor/2018.3.12f1/Unity.app/Contents/Managed/UnityEngine.dll
 -cs Assets/Code
 -D no-compilation
@@ -112,7 +120,7 @@ Fill in your name (for example "Foobar")
 
 ![](../img/unity/09unity_who.png)
 
-Press "Play" (short cut on osx: `cmd`+`p`) 
+Press "Play" (short cut on osx: `cmd`+`p`)
 
 ![](../img/unity/10unity_console.png)
 

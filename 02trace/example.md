@@ -61,7 +61,7 @@ class Main extends MonoBehaviour {
 ```
 
 
-You can see that we use 3 ways of logging in this file
+You can see (in the Start function) that we use 3 ways of logging in this file
 
 ```haxe
 	Debug.Log('[Unity] Hello world');

@@ -3,7 +3,7 @@
 Check the [code folder](https://github.com/MatthijsKamstra/haxeunity/tree/master/00helloworld/code) for more comments.
 If you want to know why we are making this? Check out the [about](about.md).
 
-This example will be a bit different from most examples I wrote.
+This example will be a bit different from the "normal" examples I wrote.
 
 First the file/folder structure will be different, this because C# in combination with Unity dictates it.
 Normally I would advise to use this folder structure:
