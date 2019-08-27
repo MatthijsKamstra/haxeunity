@@ -122,7 +122,7 @@ So when you build the code via the build file.
 
 You will end up with:
 
-![](unity_generated.png)
+![](unity_generate.png)
 
 And you can attach that to an gameobject to make it disappear when you press "Play"
 
